@@ -107,6 +107,7 @@ $highlight-grey: #F0F2F5;
 $light-orange: #FFD400;
 $dark-orange: #FF8700;
 $white: #FFFFFF;
+$black: #000000;
 
 /* BRAND COLOURS */
 $primary-blue: #0064AF;
@@ -197,6 +198,7 @@ body, .body { padding: 0; font-family: 'Roboto', "Helvetica Neue", sans-serif; f
 h1, .h1 { font-weight: 100; }
 h2, .h2 { font-weight: 700; }
 h3, .h3 { font-size: 1.2rem; font-weight: 500; color: $mid-grey; }
+h4, .h4 { font-size: 1rem; font-weight: 500; color: $black; }
 p, .p { font-weight: 300;}
 p.leading { }
 a, .a { }
@@ -204,7 +206,7 @@ a:hover, .a:hover { }
 a:active, .a:active { }
 a:visited, .a:visited { }
 
-#font-nav { margin-bottom: 20px; }
+// #font-nav { margin-bottom: 20px; }
 
 /* CUSTOM */
 .left { background-color: $dark-grey; color: $white; padding: 40px; }
@@ -224,6 +226,8 @@ a:visited, .a:visited { }
       color: $white;
       padding-left: 10px;
       height: 30px;
+      transition: padding-left 0.15s ease-in;
+      transition: border 0.15s ease-in;
     }
 
     .navigation li .active,
@@ -232,6 +236,9 @@ a:visited, .a:visited { }
       text-decoration: none;
       border-left: 5px solid $light-orange;
       margin-left: -5px;
+      padding-left: 10px;
+      transition: padding-left 0.15s ease-in;
+      transition: border 0.15s ease-in;
     }
 .download-media{
   fill: $dark-grey;
@@ -258,6 +265,12 @@ a:visited, .a:visited { }
 
 .sub-section {
   margin-bottom: 20px;
+}
+
+.example {
+  padding: 50px;
+  background-color: $white;
+  box-shadow: 0 2px 5px 2px rgba(0,0,0,0.10);
 }
 
 /* COLOUR BLOCKS */
@@ -381,3 +394,71 @@ a:visited, .a:visited { }
     background-color: $primary-blue;
     transition: background-color 0.15s ease-out;
   }
+
+/* TABS */
+.nav-tabs { border-bottom:none; }
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+    border-color: #e9ecef #e9ecef #dee2e6;
+    background-color: $white;
+}
+
+/* FORMS */
+.radio-group {
+  display: block;
+  float: none;
+  clear: left;
+  position: relative;
+  padding: 0 0 0 38px;
+  margin-bottom: 10px;
+}
+  .radio-group input {
+    position: absolute;
+    cursor: pointer;
+    left: 0;
+    top: 0;
+    width: 38px;
+    height: 38px;
+    z-index: 1;
+    margin: 0;
+    zoom: 1;
+    filter: alpha(opacity=0);
+    opacity: 0;
+  }
+
+  .radio-group [type=radio] + label::before {
+    content: "";
+    border: 2px solid;
+    background: transparent;
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+  }
+
+    .radio-group [type=radio] + label::after {
+      content: "";
+      border: 10px solid;
+      width: 0;
+      height: 0;
+      position: absolute;
+      top: 9px;
+      left: 9px;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      zoom: 1;
+      filter: alpha(opacity=0);
+      opacity: 0;
+    }
+
+    .radio-group [type=radio]:focus + label::before {
+      -webkit-box-shadow: 0 0 0 4px #ffbf47;
+      -moz-box-shadow: 0 0 0 4px #ffbf47;
+      box-shadow: 0 0 0 4px #ffbf47;
+    }
+
+    // .radio-group { float: left; }
