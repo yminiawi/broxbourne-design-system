@@ -1264,9 +1264,7 @@ color: #253858; margin-bottom: 24px; }</code></pre>
               <div class="example">
                 <p class="hint-text">I am hint text</p>
               </div><!-- end of example -->
-              <pre class="highlight"><code>.hint-text { font-family: 'Roboto'; font-weight: 100;
-font-size: 52px; line-height: 60px;
-color: #253858; margin-bottom: 24px; }</code></pre>
+              <pre class="highlight"><code>.hint-text { color: $light-grey2; }</code></pre>
             </div><!-- end of sub-section -->
 
             <div class="sub-section">
@@ -1275,11 +1273,11 @@ color: #253858; margin-bottom: 24px; }</code></pre>
                 <label for="input-name">
                   Text input label
                 </label>
-                <input id="input-name" name="input-name" type="text">
+                <input id="input-name" name="input-name" type="text" class="text-input">
               </div><!-- end of example -->
-              <pre class="highlight"><code>a { font-family: 'Roboto'; font-weight: 100;
+              <!-- <pre class="highlight"><code>a { font-family: 'Roboto'; font-weight: 100;
 font-size: 52px; line-height: 60px;
-color: #253858; margin-bottom: 24px; }</code></pre>
+color: #253858; margin-bottom: 24px; }</code></pre> -->
             </div><!-- end of sub-section -->
 
             <div class="sub-section">
@@ -1317,26 +1315,18 @@ color: #253858; margin-bottom: 24px; }</code></pre>
               <h3>Radio buttons</h3>
               <div class="example">
                 <div class="radio-group">
-                  <p>
-                    <label>
-                      <input id="radio-1" name="group1" type="radio" checked />
-                      <span>Radio selected</span>
-                    </label>
-                  </p>
+                  <input id="radio-1" name="group1" type="radio" checked />
+                  <label>Radio selected</label>
+                </div>
 
-                  <p>
-                    <label>
-                      <input id="radio-2" name="group1" type="radio" />
-                      <span>Radio unselected</span>
-                    </label>
-                  </p>
+                <div class="radio-group">
+                  <input id="radio-2" name="group1" type="radio" />
+                  <label>Radio unselected</label>
+                </div>
 
-                  <p>
-                    <label>
-                      <input id="radio-3" name="group1" type="radio" disabled />
-                      <span>Radio disabled</span>
-                    </label>
-                  </p>
+                <div class="radio-group">
+                  <input id="radio-3" name="group1" type="radio" disabled />
+                  <label>Radio disabled</label>
                 </div><!-- end of radio-group -->
               </div><!-- end of example -->
               <pre class="highlight"><code>a { font-family: 'Roboto'; font-weight: 100;
