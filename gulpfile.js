@@ -29,7 +29,7 @@ function styles() {
       autoprefixer()
     ]))
     .pipe($.if(!isProd, $.sourcemaps.write()))
-    .pipe(dest('.tmp/styles'))
+    .pipe($.if(!isProd, dest('.tmp/styles'), dest('dist/styles')))
     .pipe(server.reload({stream: true}));
 };
 
@@ -39,7 +39,7 @@ function scripts() {
     .pipe($.if(!isProd, $.sourcemaps.init()))
     .pipe($.babel())
     .pipe($.if(!isProd, $.sourcemaps.write('.')))
-    .pipe(dest('.tmp/scripts'))
+    .pipe($.if(!isProd, dest('.tmp/scripts'), dest('dist/scripts')))
     .pipe(server.reload({stream: true}));
 };
 
@@ -52,7 +52,7 @@ const lintBase = files => {
 }
 function lint() {
   return lintBase('app/scripts/**/*.js')
-    .pipe(dest('app/scripts'));
+    .pipe(dest('dist/scripts'));
 };
 function lintTest() {
   return lintBase('test/spec/**/*.js')
