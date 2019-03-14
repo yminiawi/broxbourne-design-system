@@ -178,7 +178,7 @@ if (isDev) {
 } else if (isTest) {
   serve = series(scripts, startTestServer);
 } else if (isProd) {
-  serve = series(build, startDistServer);
+  serve = startDistServer;
 }
 
 exports.serve = serve;
