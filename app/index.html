@@ -1270,10 +1270,20 @@ color: #253858; margin-bottom: 24px; }</code></pre>
             <div class="sub-section">
               <h3>Text inputs</h3>
               <div class="example">
-                <label for="input-name">
-                  Text input label
-                </label>
-                <input id="input-name" name="input-name" type="text" class="text-input">
+                <div class="form-element">
+                  <label for="input-name">Text input</label>
+                  <input id="input-name" name="input-name" type="text" class="text-input" />
+                </div>
+
+                <div class="form-element">
+                  <label for="input-name">Text input focus</label>
+                  <input id="input-name" name="input-name" type="text" class="text-input focus" />
+                </div>
+
+                <div class="form-element">
+                  <label for="input-name">Text input disabled</label>
+                  <input id="input-name" name="input-name" type="text" class="text-input" disabled />
+                </div>
               </div><!-- end of example -->
               <!-- <pre class="highlight"><code>a { font-family: 'Roboto'; font-weight: 100;
 font-size: 52px; line-height: 60px;
@@ -1314,20 +1324,20 @@ color: #253858; margin-bottom: 24px; }</code></pre>
             <div class="sub-section">
               <h3>Radio buttons</h3>
               <div class="example">
-                <div class="radio-group">
+                <div class="multiple-choice">
                   <input id="radio-1" name="group1" type="radio" checked />
                   <label>Radio selected</label>
                 </div>
 
-                <div class="radio-group">
+                <div class="multiple-choice">
                   <input id="radio-2" name="group1" type="radio" />
                   <label>Radio unselected</label>
                 </div>
 
-                <div class="radio-group">
+                <div class="multiple-choice">
                   <input id="radio-3" name="group1" type="radio" disabled />
                   <label>Radio disabled</label>
-                </div><!-- end of radio-group -->
+                </div><!-- end of multiple-choice -->
               </div><!-- end of example -->
               <pre class="highlight"><code>a { font-family: 'Roboto'; font-weight: 100;
 font-size: 52px; line-height: 60px;
@@ -1337,26 +1347,20 @@ color: #253858; margin-bottom: 24px; }</code></pre>
             <div class="sub-section">
               <h3>Checkboxes</h3>
               <div class="example">
-                <p>
-                  <label>
-                    <input name="group1" type="checkbox" checked />
-                    <span>Checkbox selected</span>
-                  </label>
-                </p>
+                <div class="multiple-choice">
+                  <input id="checkbox-1" name="group1" type="checkbox" checked />
+                  <label>Checkbox selected</label>
+                </div>
 
-                <p>
-                  <label>
-                    <input name="group1" type="checkbox" />
-                    <span>Checkbox unselected</span>
-                  </label>
-                </p>
+                <div class="multiple-choice">
+                  <input id="checkbox-2" name="group1" type="checkbox" />
+                  <label>Checkbox unselected</label>
+                </div>
 
-                <p>
-                  <label>
-                    <input name="group1" type="checkbox" disabled />
-                    <span>Checkbox disabled</span>
-                  </label>
-                </p>
+                <div class="multiple-choice">
+                  <input id="checkbox-3" name="group1" type="checkbox" disabled />
+                  <label>Checkbox disabled</label>
+                </div>
               </div><!-- end of example -->
               <pre class="highlight"><code>a { font-family: 'Roboto'; font-weight: 100;
 font-size: 52px; line-height: 60px;
@@ -1398,13 +1402,13 @@ color: #253858; margin-bottom: 24px; }</code></pre>
                   </span>
                   <div class="radios-inline">
                     <div class="radio-item">
-                      <input id="radio-1" name="radio-group" type="radio" value="yes">
+                      <input id="radio-1" name="multiple-choice" type="radio" value="yes">
                       <label for="radio-1">
                         Yes
                       </label>
                     </div>
                     <div class="radio-item">
-                      <input id="radio-2" name="radio-group" type="radio" value="no">
+                      <input id="radio-2" name="multiple-choice" type="radio" value="no">
                       <label for="radio-2">
                         No
                       </label>

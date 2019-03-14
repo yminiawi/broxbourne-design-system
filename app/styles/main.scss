@@ -403,16 +403,20 @@ a:visited, .a:visited { }
 }
 
 /* FORMS */
+.form-element {
+    margin-bottom: 30px;
+}
 
 input:focus,
 textarea:focus,
 select:focus,
-button:focus {
+button:focus,
+.focus {
   outline: 3px solid #ffbf47;
   outline-offset: 0;
 }
 
-.radio-group {
+.multiple-choice {
   display: block;
   float: none;
   clear: left;
@@ -421,7 +425,7 @@ button:focus {
   margin-bottom: 10px;
 }
 
-  .radio-group label {
+  .multiple-choice label {
     cursor: pointer;
     padding: 8px 10px 9px 12px;
     display: block;
@@ -429,12 +433,12 @@ button:focus {
     touch-action: manipulation;
   }
 
-  .radio-group label {
+  .multiple-choice label {
     float: left;
     padding-top: 7px;
     padding-bottom: 7px;
   }
-  .radio-group input {
+  .multiple-choice input {
     position: absolute;
     cursor: pointer;
     left: 0;
@@ -448,7 +452,7 @@ button:focus {
     opacity: 0;
   }
 
-  .radio-group [type=radio] + label::before {
+  .multiple-choice [type=radio] + label::before {
     content: "";
     border: 2px solid;
     background: transparent;
@@ -462,7 +466,7 @@ button:focus {
     border-radius: 50%;
   }
 
-    .radio-group [type=radio] + label::after {
+    .multiple-choice [type=radio] + label::after {
       content: "";
       border: 10px solid;
       width: 0;
@@ -478,33 +482,63 @@ button:focus {
       opacity: 0;
     }
 
-    .radio-group [type=radio]:focus + label::before {
+    .multiple-choice [type=radio]:focus + label::before {
       -webkit-box-shadow: 0 0 0 4px #ffbf47;
       -moz-box-shadow: 0 0 0 4px #ffbf47;
       box-shadow: 0 0 0 4px #ffbf47;
     }
 
-    input:focus, textarea:focus, select:focus, button:focus {
+    input:focus, textarea:focus, select:focus, button:focus, .focus {
       outline: 3px solid #ffbf47;
       outline-offset: 0;
     }
 
-    .radio-group input:checked + label::after {
+    .multiple-choice input:checked + label::after {
     zoom: 1;
     filter: alpha(opacity=100);
     opacity: 1;
     }
 
-    .radio-group input:disabled {
+    .multiple-choice input:disabled {
       cursor: default;
     }
 
-    .radio-group input:disabled + label {
+    .multiple-choice input:disabled + label {
       zoom: 1;
       filter: alpha(opacity=50);
       opacity: 0.5;
       cursor: default;
     }
+
+// CHECKBOX
+
+.multiple-choice [type=checkbox] + label::before {
+    content: "";
+    border: 2px solid;
+    background: transparent;
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.multiple-choice [type=checkbox] + label::after {
+    content: "";
+    border: solid;
+    border-width: 0 0 5px 5px;
+    background: transparent;
+    border-top-color: transparent;
+    width: 20px;
+    height: 10px;
+    position: absolute;
+    top: 10px;
+    left: 8px;
+    transform: rotate(-45deg);
+    zoom: 1;
+    filter: alpha(opacity=0);
+    opacity: 0;
+  }
+
 
     // HINT TEXT
     .hint-text { color: $light-grey2; }
@@ -523,4 +557,12 @@ button:focus {
         border: 2px solid $black;
         border-radius: 0;
         appearance: none;
+    }
+
+    input:disabled { cursor: default; }
+    input:disabled + label {
+      zoom: 1;
+      filter: alpha(opacity=50);
+      opacity: 0.5;
+      cursor: default;
     }
