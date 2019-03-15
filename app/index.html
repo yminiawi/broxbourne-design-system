@@ -1261,9 +1261,9 @@ color: #253858; margin-bottom: 24px; }</code></pre>
             <h2>Form components</h2>
 
             <div class="sub-section">
-              <h3>Radio buttons</h3>
+              <h3>Hint text</h3>
               <div class="example">
-                <p class="hint-text">I am hint text</p>
+                <p class="hint-text clear-margin">I am hint text</p>
               </div><!-- end of example -->
               <pre class="highlight"><code>.hint-text { color: $light-grey2; }</code></pre>
             </div><!-- end of sub-section -->
@@ -1272,18 +1272,18 @@ color: #253858; margin-bottom: 24px; }</code></pre>
               <h3>Text inputs</h3>
               <div class="example">
                 <div class="form-element">
-                  <label for="input-name">Text input</label>
-                  <input id="input-name" name="input-name" type="text" class="text-input" />
+                  <label for="text-input">Text input</label>
+                  <input id="text-input" name="text-input" type="text" class="text-input form-control" />
                 </div>
 
                 <div class="form-element">
-                  <label for="input-name">Text input focus</label>
-                  <input id="input-name" name="input-name" type="text" class="text-input focus" />
+                  <label for="text-input-focus">Text input focus</label>
+                  <input id="text-input-focus" name="text-input-focus" type="text" class="text-input focus form-control" />
                 </div>
 
                 <div class="form-element">
-                  <label for="input-name">Text input disabled</label>
-                  <input id="input-name" name="input-name" type="text" class="text-input" disabled />
+                  <label for="text-input-disabled">Text input disabled</label>
+                  <input id="text-input-disabled" name="text-input-disabled" type="text" class="text-input form-control" disabled />
                 </div>
               </div><!-- end of example -->
               <!-- <pre class="highlight"><code>a { font-family: 'Roboto'; font-weight: 100;
@@ -1294,28 +1294,65 @@ color: #253858; margin-bottom: 24px; }</code></pre> -->
             <div class="sub-section">
               <h3>Text area</h3>
               <div class="example">
-                <label for="input-name">
-                  Text area label
-                </label>
-                <textarea id="input-name" name="input-name" type="text"></textarea>
+                <div class="form-element">
+                  <label for="textarea-input">Text area input</label>
+                  <textarea id="textarea-input" name="textarea-input" type="text" class="form-control" rows="5" /></textarea>
+                </div>
+
+                <div class="form-element">
+                  <label for="textarea-input-focus">Text area focus</label>
+                  <textarea id="textarea-input-focus" name="textarea-input-focus" type="text" class="form-control focus" rows="5" /></textarea>
+                </div>
+
+                <div class="form-element">
+                  <label for="textarea-input-disabled">Text area disabled</label>
+                  <textarea id="textarea-input-disabled" name="textarea-input-disabled" type="text" class="form-control" rows="5" disabled /></textarea>
+                </div>
+
               </div><!-- end of example -->
-              <pre class="highlight"><code>a { font-family: 'Roboto'; font-weight: 100;
+              <!-- <pre class="highlight"><code>a { font-family: 'Roboto'; font-weight: 100;
 font-size: 52px; line-height: 60px;
-color: #253858; margin-bottom: 24px; }</code></pre>
+color: #253858; margin-bottom: 24px; }</code></pre> -->
             </div><!-- end of sub-section -->
 
             <div class="sub-section">
               <h3>Select inputs</h3>
               <div class="example">
-                <label for="input-select">
-                  Sort by
-                </label>
-                <select id="input-select" name="input-select">
-                  <option value="value1">Value 1</option>
-                  <option value="value2" selected>Value 2</option>
-                  <option value="value3">Value 3</option>
-                  <option value="value4">Value 4</option>
-                </select>
+                <div class="form-element">
+                  <label for="input-select">
+                    Select
+                  </label>
+                  <select id="input-select" name="input-select" class="form-control">
+                    <option value="value1">Value 1</option>
+                    <option value="value2" selected>Value 2</option>
+                    <option value="value3">Value 3</option>
+                    <option value="value4">Value 4</option>
+                  </select>
+                </div>
+
+                <div class="form-element">
+                  <label for="input-select">
+                    Select Focus
+                  </label>
+                  <select id="input-select" name="input-select" class="form-control focus">
+                    <option value="value1">Value 1</option>
+                    <option value="value2" selected>Value 2</option>
+                    <option value="value3">Value 3</option>
+                    <option value="value4">Value 4</option>
+                  </select>
+                </div>
+
+                <div class="form-element">
+                  <label for="input-select">
+                    Select disabled
+                  </label>
+                  <select id="input-select" name="input-select" class="form-control" disabled>
+                    <option value="value1">Value 1</option>
+                    <option value="value2" selected>Value 2</option>
+                    <option value="value3">Value 3</option>
+                    <option value="value4">Value 4</option>
+                  </select>
+                </div>
               </div><!-- end of example -->
               <pre class="highlight"><code>a { font-family: 'Roboto'; font-weight: 100;
 font-size: 52px; line-height: 60px;
@@ -1326,18 +1363,18 @@ color: #253858; margin-bottom: 24px; }</code></pre>
               <h3>Radio buttons</h3>
               <div class="example">
                 <div class="multiple-choice">
-                  <input id="radio-1" name="group1" type="radio" checked />
-                  <label>Radio selected</label>
+                  <input id="radio-1" name="group1" type="radio" class="focus" checked />
+                  <label for="radio-1">Radio selected</label>
                 </div>
 
                 <div class="multiple-choice">
                   <input id="radio-2" name="group1" type="radio" />
-                  <label>Radio unselected</label>
+                  <label for="radio-2">Radio unselected</label>
                 </div>
 
                 <div class="multiple-choice">
                   <input id="radio-3" name="group1" type="radio" disabled />
-                  <label>Radio disabled</label>
+                  <label for="radio-3">Radio disabled</label>
                 </div><!-- end of multiple-choice -->
               </div><!-- end of example -->
               <pre class="highlight"><code>a { font-family: 'Roboto'; font-weight: 100;
@@ -1349,18 +1386,18 @@ color: #253858; margin-bottom: 24px; }</code></pre>
               <h3>Checkboxes</h3>
               <div class="example">
                 <div class="multiple-choice">
-                  <input id="checkbox-1" name="group1" type="checkbox" checked />
-                  <label>Checkbox selected</label>
+                  <input id="checkbox-1" name="group1" type="checkbox" value="checkbox-1" checked />
+                  <label for="checkbox-1">Checkbox selected</label>
                 </div>
 
                 <div class="multiple-choice">
-                  <input id="checkbox-2" name="group1" type="checkbox" />
-                  <label>Checkbox unselected</label>
+                  <input id="checkbox-2" name="group1" type="checkbox" value="checkbox-2" />
+                  <label for="checkbox-2">Checkbox unselected</label>
                 </div>
 
                 <div class="multiple-choice">
-                  <input id="checkbox-3" name="group1" type="checkbox" disabled />
-                  <label>Checkbox disabled</label>
+                  <input id="checkbox-3" name="group1" type="checkbox" value="checkbox-3" disabled />
+                  <label for="checkbox-3">Checkbox disabled</label>
                 </div>
               </div><!-- end of example -->
               <pre class="highlight"><code>a { font-family: 'Roboto'; font-weight: 100;
@@ -1372,7 +1409,7 @@ color: #253858; margin-bottom: 24px; }</code></pre>
               <h3>Buttons</h3>
               <h4>Primary buttons</h4>
               <div class="example">
-                <button>Primary button</button>
+                <button class="button">Primary button</button>
               </div><!-- end of example -->
               <pre class="highlight"><code>a { font-family: 'Roboto'; font-weight: 100;
 font-size: 52px; line-height: 60px;
