@@ -210,9 +210,44 @@ a:active, .a:active { }
 a:visited, .a:visited { }
 a:focus, .a:focus { background-color: $form-active-border; outline: 3px solid $form-active-border; }
 
+blockquote{
+  font-size: 1.4em;
+  width:100%;
+  margin:50px auto;
+  font-style:italic;
+  color: $dark-grey;
+  padding:1.2em 30px 1.2em 75px;
+  border-left:8px solid $secondary-teal ;
+  line-height:1.6;
+  position: relative;
+  background:#EDEDED;
+}
+
+blockquote::before{
+  font-family:Arial;
+  content: "\201C";
+  color: $secondary-teal;
+  font-size:4em;
+  position: absolute;
+  left: 10px;
+  top:-10px;
+}
+
+blockquote::after{
+  content: '';
+}
+
+blockquote span{
+  display:block;
+  color:$dark-grey;
+  font-style: normal;
+  font-weight: bold;
+  margin-top:1em;
+}
+
 /* CUSTOM */
 .left { background-color: $left-nav-bg; color: $white; padding: 40px; }
-.right { background-color: $light-grey; padding: 155px 10% 5% 10%; }
+.right { background-color: $white; padding: 155px 10% 5% 10%; }
 
 /* LOGO */
 .logo-container {
@@ -240,7 +275,7 @@ a:focus, .a:focus { background-color: $form-active-border; outline: 3px solid $f
   width: 75%;
   color: $black;
   display: table-cell;
-  vertical-align: bottom;
+  vertical-align: middle;
 }
 
 .word-mark h1 {
@@ -259,7 +294,7 @@ a:focus, .a:focus { background-color: $form-active-border; outline: 3px solid $f
   list-style-type: none;
   overflow: auto;
 }
-  // .navigation h3 { color: $white; }
+  .navigation h3 { color: $dark-grey; }
   .navigation li { padding: 5px; }
     .navigation li a {
       color: $dark-grey;
