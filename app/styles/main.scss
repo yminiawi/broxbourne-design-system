@@ -213,15 +213,22 @@ a:focus, .a:focus { background-color: $form-active-border; outline: 3px solid $f
 /* CUSTOM */
 .left { background-color: $dark-grey; color: $white; padding: 40px; }
 .right { background-color: $light-grey; padding: 155px 10% 5% 10%; }
+
+/* LOGO */
+.logo-container {
+  padding: 50px;
+  text-align: center;
+  margin-bottom: 20px;
+}
 .logo {
   display: flex;
   margin-bottom: 50px;
-  width: 90%;
+  // width: 90%;
   max-width: 300px;
 }
 
 .logo-mark {
-  width: 30%;
+  // width: 30%;
   flex-grow: 1;
 }
 
@@ -229,7 +236,7 @@ a:focus, .a:focus { background-color: $form-active-border; outline: 3px solid $f
   font-family: 'Raleway', sans-serif;
   flex-grow: 2;
   padding-left: 5px;
-  width: 70%;
+  // width: 70%;
   font-size: 1.5vw;
   line-height: 2.4vw;
 }
@@ -396,16 +403,6 @@ a:focus, .a:focus { background-color: $form-active-border; outline: 3px solid $f
 
 /* LAYOUT */
 .grid-block { background-color: $p-blue-25; border: 1px solid $primary-blue; padding: 10px; }
-
-/* LOGO USAGE */
-.logo-container {
-  padding: 50px;
-  text-align: center;
-  margin-bottom: 20px;
-}
-// .logo-example {
-//   width: 20%;
-// }
 
 /* BACK TO TOP BUTTON */
 .back-to-top {
