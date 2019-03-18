@@ -208,8 +208,6 @@ a:active, .a:active { }
 a:visited, .a:visited { }
 a:focus, .a:focus { background-color: $form-active-border; outline: 3px solid $form-active-border; }
 
-// #font-nav { margin-bottom: 20px; }
-
 /* CUSTOM */
 .left { background-color: $dark-grey; color: $white; padding: 40px; }
 .right { background-color: $light-grey; padding: 155px 10% 5% 10%; }
@@ -223,7 +221,6 @@ a:focus, .a:focus { background-color: $form-active-border; outline: 3px solid $f
 .logo {
   display: flex;
   margin-bottom: 50px;
-  // width: 90%;
   max-width: 300px;
 }
 
@@ -233,14 +230,18 @@ a:focus, .a:focus { background-color: $form-active-border; outline: 3px solid $f
 }
 
 .word-mark {
-  font-family: 'Raleway', sans-serif;
   margin-top: -4px;
   flex-grow: 2;
   padding-left: 10px;
   width: 75%;
+}
+
+.word-mark h1 {
+  font-family: 'Raleway', sans-serif;
   font-size: 1.5vw;
   line-height: 2.4vw;
   letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .navigation {
