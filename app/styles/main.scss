@@ -213,7 +213,27 @@ a:focus, .a:focus { background-color: $form-active-border; outline: 3px solid $f
 /* CUSTOM */
 .left { background-color: $dark-grey; color: $white; padding: 40px; }
 .right { background-color: $light-grey; padding: 155px 10% 5% 10%; }
-.logo { margin-bottom: 50px; width: 90%; max-width: 300px; }
+.logo {
+  display: flex;
+  margin-bottom: 50px;
+  width: 90%;
+  max-width: 300px;
+}
+
+.logo-mark {
+  width: 30%;
+  flex-grow: 1;
+}
+
+.word-mark {
+  flex-grow: 2;
+  padding-left: 5px;
+  width: 70%;
+  font-size: 1.5vw;
+  line-height: 2.4vw;
+  font-family: 'Raleway', sans-serif;
+}
+
 .navigation {
   padding: 0;
   margin: 0;
@@ -235,6 +255,8 @@ a:focus, .a:focus { background-color: $form-active-border; outline: 3px solid $f
     .navigation li .active,
     .navigation li a:hover {
       color: $light-orange;
+      background: none;
+      outline: 0;
       text-decoration: none;
       border-left: 5px solid $light-orange;
       margin-left: -5px;
@@ -242,6 +264,13 @@ a:focus, .a:focus { background-color: $form-active-border; outline: 3px solid $f
       transition: padding-left 0.15s ease-in;
       transition: border 0.15s ease-in;
     }
+
+.nav-item a,
+.nav-item a:hover{
+  outline: 0;
+}
+
+// BUTTONS
 .download-media{
   fill: $dark-grey;
   margin-bottom: 20px;
@@ -592,7 +621,7 @@ input:disabled + label {
 
 // BUTTON
 
-.button {
+.primary-button {
     background-color: #00823b;
     position: relative;
     display: inline-block;
