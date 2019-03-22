@@ -708,8 +708,8 @@ input:disabled + label {
 }
 
 // ALERTS
-.alert { background-color: $alert-background; display: flex; padding: 20px; }
-.alert-icon { width: 10%; }
+.alert { background-color: $alert-background; display: flex; padding: 20px; border-radius: 0; }
+.alert-icon { width: 5%; }
 .alert-content { width: 90%; margin-left: 20px; text-align: left; }
-.alert-heading { font-size: 3vw; font-weight: 500; margin-bottom:0; }
-.alert-body { font-size: 1.8vw; }
+.alert-heading { font-size: 2rem; font-weight: 500; margin-bottom:0; }
+.alert-body { font-size: 1.5rem; }
