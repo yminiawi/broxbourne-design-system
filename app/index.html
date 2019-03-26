@@ -11,12 +11,12 @@
     <!-- endbuild -->
 
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="styles/main.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway:800" rel="stylesheet">
   </head>
-  <body>
+  <body data-spy"right" data-target=".navbar">
     <!--[if IE]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -25,7 +25,7 @@
         <div class="left col-lg-3">
           <div class="row">
             <div class="col-10">
-              <a href="#">
+              <a href="index.html">
                 <div class="logo marb-50 width-100">
                     <div class="logo-mark">
                       <img src="images/badger.svg" alt="Broxbourne badger logo mark" class="width-100">
@@ -58,31 +58,29 @@
               </div><!-- end of col-2 -->
             </div><!-- end of row -->
 
-            <div class="show collapse navbar-collapse" id="my-dropdown">
+            <div id="nav-bar" class="show collapse navbar-collapse" id="my-dropdown">
               <ul class="navigation">
-                <h3>Foundations</h3>
-                <li class="nav-item"><a data-spy="scroll" href="#purpose" class="nav-link active">Purpose</a></li>
-                <li class="nav-item"><a data-spy="scroll" href="#vision" class="nav-link">Vision</a></li>
-                <li class="nav-item"><a data-spy="scroll" href="#values" class="nav-link">Values</a></li>
-                <li class="nav-item"><a data-spy="scroll" href="#personality" class="nav-link">Personality</a></li>
-                <li class="nav-item"><a data-spy="scroll" href="#tone-of-voice" class="nav-link">Tone of voice</a></li>
+                <li class="nav-item"><a href="index.html" class="nav-link active"><h3>Foundations</h3></a></li>
+                <li class="nav-item"><a href="#purpose" class="nav-link">Purpose</a></li>
+                <li class="nav-item"><a href="#vision" class="nav-link">Vision</a></li>
+                <li class="nav-item"><a href="#values" class="nav-link">Values</a></li>
+                <li class="nav-item"><a href="#personality" class="nav-link">Personality</a></li>
+                <li class="nav-item"><a href="#tone-of-voice" class="nav-link">Tone of voice</a></li>
               </ul>
               <ul class="navigation">
-                <h3>Styles</h3>
+                <li class="nav-item"><a data-spy="scroll" href="styles.html" class="nav-link"><h3>Styles</h3></a></li>
                 <li class="nav-item"><a data-spy="scroll" href="#colours" class="nav-link">Colours</a></li>
                 <li class="nav-item"><a data-spy="scroll" href="#typography" class="nav-link">Typography</a></li>
                 <li class="nav-item"><a data-spy="scroll" href="#iconography" class="nav-link">Iconography</a></li>
-                <!-- <li class="nav-item"><a data-spy="scroll" href="#grid-layout" class="nav-link">Grid layout</a></li> -->
               </ul>
               <ul class="navigation">
-                <h3>Guidelines</h3>
+                <li class="nav-item"><a href="guidelines.html" class="nav-link"><h3>Guidelines</h3></a></li>
                 <li class="nav-item"><a data-spy="scroll" href="#images" class="nav-link">Images</a></li>
                 <li class="nav-item"><a data-spy="scroll" href="#accessibility" class="nav-link">Accessibility</a></li>
-                <!-- <li class="nav-item"><a data-spy="scroll" href="#tone-of-voice" class="nav-link">Tone of voice</a></li> -->
                 <li class="nav-item"><a data-spy="scroll" href="#writing-guidelines" class="nav-link">Writing guidelines</a></li>
               </ul>
               <ul class="navigation">
-                <h3>Components</h3>
+                <li class="nav-item"><a href="components.html" class="nav-link"><h3>Components</h3></a></li>
                 <li class="nav-item"><a data-spy="scroll" href="#logos" class="nav-link">Logos</a></li>
                 <li class="nav-item"><a data-spy="scroll" href="#buttons" class="nav-link">Buttons</a></li>
                 <li class="nav-item"><a data-spy="scroll" href="#tables" class="nav-link">Tables</a></li>
@@ -226,9 +224,9 @@
 
     <!-- build:js scripts/vendor.js -->
 
-      <script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"></script>
-      <script type="text/javascript" src="/node_modules/popper.js/dist/umd/popper.min.js"></script>
-      <script type="text/javascript" src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
     <!-- endbuild -->
     <!-- build:js scripts/main.js -->
