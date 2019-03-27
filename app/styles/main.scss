@@ -293,8 +293,10 @@ blockquote span{
 }
 .right {
   margin-left: 350px;
-  position: absolute;
+  position: relative;
   padding: 155px 10% 5% 10%;
+  height: 100%;
+  overflow-y: scroll;
 }
 
 /* LOGO */

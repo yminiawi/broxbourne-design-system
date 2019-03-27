@@ -40,6 +40,9 @@ $(".nav-link").on("click", function(){
 //
 // });
 
+// Scrollspy
+$('.right').scrollspy({ target: '#nav-bar' })
+
 // Smooth scrolling
 $(document).ready(function(){
   // Add smooth scrolling to all links

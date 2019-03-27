@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway:800" rel="stylesheet">
   </head>
-  <body data-spy="right" data-target=".navbar">
+  <body>
     <!--[if IE]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -59,28 +59,28 @@
             </div><!-- end of row -->
 
             <div id="nav-bar" class="show collapse navbar-collapse" id="my-dropdown">
-              <ul class="navigation">
-                <li class="nav-item"><a href="index.html" class="nav-link active"><h3>Foundations</h3></a></li>
-                <li class="nav-item"><a href="#purpose" class="nav-link">Purpose</a></li>
-                <li class="nav-item"><a href="#vision" class="nav-link">Vision</a></li>
-                <li class="nav-item"><a href="#values" class="nav-link">Values</a></li>
-                <li class="nav-item"><a href="#personality" class="nav-link">Personality</a></li>
-                <li class="nav-item"><a href="#tone-of-voice" class="nav-link">Tone of voice</a></li>
+              <ul class="navigation nav flex-column">
+                <li class="nav-item"><a data-spy="scroll" href="#start-content" class="nav-link active"><h3>Foundations</h3></a></li>
+                <li class="nav-item"><a data-spy="scroll" href="#purpose" class="nav-link">Purpose</a></li>
+                <li class="nav-item"><a data-spy="scroll" href="#vision" class="nav-link">Vision</a></li>
+                <li class="nav-item"><a data-spy="scroll" href="#values" class="nav-link">Values</a></li>
+                <li class="nav-item"><a data-spy="scroll" href="#personality" class="nav-link">Personality</a></li>
+                <li class="nav-item"><a data-spy="scroll" href="#tone-of-voice" class="nav-link">Tone of voice</a></li>
               </ul>
-              <ul class="navigation">
+              <ul class="navigation nav flex-column">
                 <li class="nav-item"><a data-spy="scroll" href="styles.html" class="nav-link"><h3>Styles</h3></a></li>
                 <li class="nav-item"><a data-spy="scroll" href="styles.html#colours" class="nav-link">Colours</a></li>
                 <li class="nav-item"><a data-spy="scroll" href="styles.html#typography" class="nav-link">Typography</a></li>
                 <li class="nav-item"><a data-spy="scroll" href="styles.html#iconography" class="nav-link">Iconography</a></li>
               </ul>
-              <ul class="navigation">
-                <li class="nav-item"><a href="guidelines.html" class="nav-link"><h3>Guidelines</h3></a></li>
+              <ul class="navigation nav flex-column">
+                <li class="nav-item"><a data-spy="scroll" href="guidelines.html" class="nav-link"><h3>Guidelines</h3></a></li>
                 <li class="nav-item"><a data-spy="scroll" href="guidelines.html#images" class="nav-link">Images</a></li>
                 <li class="nav-item"><a data-spy="scroll" href="guidelines.html#accessibility" class="nav-link">Accessibility</a></li>
                 <li class="nav-item"><a data-spy="scroll" href="guidelines.html#writing-guidelines" class="nav-link">Writing guidelines</a></li>
               </ul>
-              <ul class="navigation">
-                <li class="nav-item"><a href="components.html" class="nav-link"><h3>Components</h3></a></li>
+              <ul class="navigation nav flex-column">
+                <li class="nav-item"><a data-spy="scroll" href="components.html" class="nav-link"><h3>Components</h3></a></li>
                 <li class="nav-item"><a data-spy="scroll" href="components.html#logos" class="nav-link">Logos</a></li>
                 <li class="nav-item"><a data-spy="scroll" href="components.html#buttons" class="nav-link">Buttons</a></li>
                 <li class="nav-item"><a data-spy="scroll" href="components.html#tables" class="nav-link">Tables</a></li>
@@ -89,8 +89,8 @@
                 <li class="nav-item"><a data-spy="scroll" href="components.html#pagination" class="nav-link">Pagination</a></li>
                 <li class="nav-item"><a data-spy="scroll" href="components.html#progress-bars" class="nav-link">Progress bars</a></li>
               </ul>
-              <ul class="navigation">
-                <h3>Patterns</h3>
+              <ul class="navigation nav flex-column">
+                <li class="nav-item"><a href="patterns.html" class="nav-link"><h3>Patterns</h3></a></li>
                 <li class="nav-item"><a href="#forms-p" class="nav-link">Forms</a></li>
                 <li class="nav-item"><a href="#grid" class="nav-link">Grid layout</a></li>
                 <li class="nav-item"><a href="#validation" class="nav-link">Validation</a></li>
@@ -99,7 +99,7 @@
           </nav>
         </div><!-- end of left section -->
 
-        <div class="col-lg-9 right">
+        <div id="start-content" class="col-lg-9 right" data-spy="right" data-target="#nav-bar" data-offset="0">
           <h1>Broxbourne design system</h1>
 
           <div id="purpose" class="guide-section">
@@ -227,9 +227,6 @@
     <script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="/node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script type="text/javascript" src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
 
     <!-- endbuild -->
     <!-- build:js scripts/main.js -->

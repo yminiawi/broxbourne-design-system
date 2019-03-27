@@ -25,7 +25,7 @@
         <div class="left col-lg-3">
           <div class="row">
             <div class="col-10">
-              <a href="#">
+              <a href="index.html">
                 <div class="logo marb-50 width-100">
                     <div class="logo-mark">
                       <img src="images/badger.svg" alt="Broxbourne badger logo mark" class="width-100">
@@ -58,31 +58,29 @@
               </div><!-- end of col-2 -->
             </div><!-- end of row -->
 
-            <div class="show collapse navbar-collapse" id="my-dropdown">
-              <ul class="navigation">
-                <h3>Foundations</h3>
-                <li class="nav-item"><a data-spy="scroll" href="#purpose" class="nav-link active">Purpose</a></li>
-                <li class="nav-item"><a data-spy="scroll" href="#vision" class="nav-link">Vision</a></li>
-                <li class="nav-item"><a data-spy="scroll" href="#values" class="nav-link">Values</a></li>
-                <li class="nav-item"><a data-spy="scroll" href="#personality" class="nav-link">Personality</a></li>
-                <li class="nav-item"><a data-spy="scroll" href="#tone-of-voice" class="nav-link">Tone of voice</a></li>
+            <div id="nav-bar" class="show collapse navbar-collapse" id="my-dropdown">
+              <ul class="navigation nav flex-column">
+                <li class="nav-item"><a data-spy="scroll" href="index.html" class="nav-link"><h3>Foundations</h3></a></li>
+                <li class="nav-item"><a data-spy="scroll" href="index.html#purpose" class="nav-link">Purpose</a></li>
+                <li class="nav-item"><a data-spy="scroll" href="index.html#vision" class="nav-link">Vision</a></li>
+                <li class="nav-item"><a data-spy="scroll" href="index.html#values" class="nav-link">Values</a></li>
+                <li class="nav-item"><a data-spy="scroll" href="index.html#personality" class="nav-link">Personality</a></li>
+                <li class="nav-item"><a data-spy="scroll" href="index.html#tone-of-voice" class="nav-link">Tone of voice</a></li>
               </ul>
-              <ul class="navigation">
-                <h3>Styles</h3>
-                <li class="nav-item"><a data-spy="scroll" href="#colours" class="nav-link">Colours</a></li>
-                <li class="nav-item"><a data-spy="scroll" href="#typography" class="nav-link">Typography</a></li>
-                <li class="nav-item"><a data-spy="scroll" href="#iconography" class="nav-link">Iconography</a></li>
-                <!-- <li class="nav-item"><a data-spy="scroll" href="#grid-layout" class="nav-link">Grid layout</a></li> -->
+              <ul class="navigation nav flex-column">
+                <li class="nav-item"><a data-spy="scroll" href="styles.html" class="nav-link"><h3>Styles</h3></a></li>
+                <li class="nav-item"><a data-spy="scroll" href="styles.html#colours" class="nav-link">Colours</a></li>
+                <li class="nav-item"><a data-spy="scroll" href="styles.html#typography" class="nav-link">Typography</a></li>
+                <li class="nav-item"><a data-spy="scroll" href="styles.html#iconography" class="nav-link">Iconography</a></li>
               </ul>
-              <ul class="navigation">
-                <h3>Guidelines</h3>
-                <li class="nav-item"><a data-spy="scroll" href="#images" class="nav-link">Images</a></li>
-                <li class="nav-item"><a data-spy="scroll" href="#accessibility" class="nav-link">Accessibility</a></li>
-                <!-- <li class="nav-item"><a data-spy="scroll" href="#tone-of-voice" class="nav-link">Tone of voice</a></li> -->
-                <li class="nav-item"><a data-spy="scroll" href="#writing-guidelines" class="nav-link">Writing guidelines</a></li>
+              <ul class="navigation nav flex-column">
+                <li class="nav-item"><a data-spy="scroll" href="guidelines.html" class="nav-link"><h3>Guidelines</h3></a></li>
+                <li class="nav-item"><a data-spy="scroll" href="guidelines.html#images" class="nav-link">Images</a></li>
+                <li class="nav-item"><a data-spy="scroll" href="guidelines.html#accessibility" class="nav-link">Accessibility</a></li>
+                <li class="nav-item"><a data-spy="scroll" href="guidelines.html#writing-guidelines" class="nav-link">Writing guidelines</a></li>
               </ul>
-              <ul class="navigation">
-                <h3>Components</h3>
+              <ul class="navigation nav flex-column">
+                <li class="nav-item"><a data-spy="scroll" href="#start-content" class="nav-link active"><h3>Components</h3></a></li>
                 <li class="nav-item"><a data-spy="scroll" href="#logos" class="nav-link">Logos</a></li>
                 <li class="nav-item"><a data-spy="scroll" href="#buttons" class="nav-link">Buttons</a></li>
                 <li class="nav-item"><a data-spy="scroll" href="#tables" class="nav-link">Tables</a></li>
@@ -91,8 +89,8 @@
                 <li class="nav-item"><a data-spy="scroll" href="#pagination" class="nav-link">Pagination</a></li>
                 <li class="nav-item"><a data-spy="scroll" href="#progress-bars" class="nav-link">Progress bars</a></li>
               </ul>
-              <ul class="navigation">
-                <h3>Patterns</h3>
+              <ul class="navigation nav flex-column">
+                <li class="nav-item"><a href="patterns.html" class="nav-link"><h3>Patterns</h3></a></li>
                 <li class="nav-item"><a href="#forms-p" class="nav-link">Forms</a></li>
                 <li class="nav-item"><a href="#grid" class="nav-link">Grid layout</a></li>
                 <li class="nav-item"><a href="#validation" class="nav-link">Validation</a></li>
@@ -101,10 +99,10 @@
           </nav>
         </div><!-- end of left section -->
 
-        <div class="col-lg-9 right">
+        <div id="start-content" class="col-lg-9 right" data-spy="right" data-target="#nav-bar" data-offset="0">
           <h1>Broxbourne design system</h1>
 
-          <div id="logos"  class="guide-section">
+          <div id="logos" class="guide-section">
             <h2>Logos</h2>
             <div class="sub-section">
               <button class="button download-media">
@@ -452,6 +450,7 @@ color: #253858; margin-bottom: 24px; }</code></pre>
 
             </div><!-- end of example -->
           </div><!--end of latest-news -->
+
         </div><!-- end of right -->
       </div><!-- end of row -->
 
