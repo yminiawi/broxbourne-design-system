@@ -113,6 +113,20 @@ $black: #000000;
 $left-nav-bg: #F2F9F9;
 
 /* BRAND COLOURS */
+// PRIMARY
+$p-colour-1: #007F87;
+$p-colour-2: #00496C;
+
+// SECONDARY
+$s-colour-1: #E3E9EE;
+$s-colour-2: #EEF3F7;
+$s-colour-3: #EBF8F7;
+
+// TERTIARY
+$t-colour-1: #DB0A5B;
+$t-colour-2: #00C1CC;
+$t-colour-3: #F2CA27;
+
 $primary-blue: #0064AF;
 $secondary-blue: #0AA7C6;
 $secondary-teal: #00AFA3;
@@ -138,6 +152,15 @@ $p-blue-25: tint( $primary-blue, 75% );
 
 /* HELPER CLASSES */
 // COLOUR FILLS
+.p-col-1-bg { background-color: $p-colour-1; }
+.p-col-2-bg { background-color: $p-colour-2; }
+.s-col-1-bg { background-color: $s-colour-1; }
+.s-col-2-bg { background-color: $s-colour-2; }
+.s-col-3-bg { background-color: $s-colour-3; }
+.t-col-1-bg { background-color: $t-colour-1; }
+.t-col-2-bg { background-color: $t-colour-2; }
+.t-col-3-bg { background-color: $t-colour-3; }
+
 .p-blue-fill { background-color: $primary-blue; }
 .p-blue-50-fill { background-color: $p-blue-50; }
 .p-blue-25-fill { background-color: $p-blue-25; }
@@ -232,14 +255,14 @@ img[src$=".svg"] {width: 100%;}
 // }
 
 /* TYPOGRAPHY */
-body, .body { background: $left-nav-bg; padding: 0; font-family: 'Roboto', "Helvetica Neue", sans-serif; font-weight: 300; }
-h1, .h1 { font-weight: 100; }
-h2, .h2 { font-weight: 700; }
+body, .body { background: $p-colour-1; padding: 0; font-family: 'Roboto', "Helvetica Neue", sans-serif; font-weight: 300; overflow-x: hidden; }
+h1, .h1 { font-size: 2.3rem; line-height: 2.6rem; font-weight: 100; }
+h2, .h2 { font-size: 1.7rem; line-height: 2rem; font-weight: 700; }
 h3, .h3 { font-size: 1.2rem; font-weight: 500; color: $mid-grey; }
 h4, .h4 { font-size: 1rem; font-weight: 500; color: $black; }
 p, .p { font-weight: 300;}
 p.leading { }
-a, .a {  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
+a, .a { color: $p-colour-1; font-weight: 500; }
 a:hover, .a:hover { background-color: $form-active-border; outline: 3px solid $form-active-border; }
 a:active, .a:active { }
 a:visited, .a:visited { }
@@ -292,11 +315,12 @@ blockquote span{
   overflow: scroll;
 }
 .right {
-  margin-left: 350px;
+  margin-left: 30%;
+  // margin-left: 350px;
   position: relative;
-  padding: 155px 10% 5% 10%;
+  padding: 5% 10% 5% 0;
   height: 100%;
-  overflow-y: scroll;
+  // overflow-y: scroll;
 }
 
 /* LOGO */
@@ -350,6 +374,7 @@ blockquote span{
   .navigation li { padding: 5px; }
     .navigation li a {
       color: $dark-grey;
+      font-weight: 300;
       padding-left: 10px;
       height: 30px;
       transition: padding-left 0.15s ease-in;
@@ -558,7 +583,7 @@ blockquote span{
     color: #495057;
     border-color: $black;
     background-color: $white;
-    outline: 3px solid $form-active-border;
+    outline: 3px solid $t-colour-2;
     outline-offset: 0;
     box-shadow: none;
   }
@@ -568,7 +593,7 @@ textarea:focus,
 select:focus,
 button:focus,
 .focus {
-  outline: 3px solid $form-active-border;
+  outline: 3px solid $t-colour-2;
   outline-offset: 0;
 }
 
@@ -688,8 +713,8 @@ button:focus,
     opacity: 0;
   }
 
-.multiple-choice [type=radio]:focus + label::before, .focusradio { box-shadow: 0 0 0 4px $form-active-border; }
-.multiple-choice [type=checkbox]:focus + label::before, .focuscheck { box-shadow: 0 0 0 3px $form-active-border; }
+.multiple-choice [type=radio]:focus + label::before, .focusradio { box-shadow: 0 0 0 4px $t-colour-2; }
+.multiple-choice [type=checkbox]:focus + label::before, .focuscheck { box-shadow: 0 0 0 3px $t-colour-2; }
 .multiple-choice input:checked + label::after {
   zoom: 1;
   filter: alpha(opacity=100);
@@ -726,7 +751,7 @@ input:disabled + label {
 // BUTTONS
 .primary-button {
   transition: .15s ease-in;
-  background-color: $p-button-colour;
+  background-color: $p-colour-2;
   position: relative;
   display: inline-block;
   padding: 15px;
@@ -734,7 +759,7 @@ input:disabled + label {
   border-radius: 0;
   outline: 1px solid transparent;
   outline-offset: -1px;
-  box-shadow: 0 2px 0 $p-button-shadow;
+  box-shadow: 0 2px 0 $p-colour-1;
   font-size: 1em;
   line-height: 1.25em;
   text-decoration: none;
@@ -746,7 +771,7 @@ input:disabled + label {
 
   .primary-button:hover {
     transition: .15s ease-in;
-    background-color: $p-button-hover;
+    background-color: $p-colour-1;
     position: relative;
     display: inline-block;
     padding: 15px;
@@ -754,7 +779,7 @@ input:disabled + label {
     border-radius: 0;
     outline: 1px solid transparent;
     outline-offset: -1px;
-    box-shadow: 0 2px 0 $p-button-shadow;
+    box-shadow: 0 2px 0 $p-colour-1;
     font-size: 1em;
     line-height: 1.25em;
     text-decoration: none;
@@ -762,14 +787,38 @@ input:disabled + label {
     color: $white;
     box-sizing: border-box;
     vertical-align: top;
+  }
+
+.secondary-button {
+  transition: 0.15s ease-in;
+  background: $p-colour-2;
+  border-radius: 50px;
+  padding: 10px 20px;
+  color: white;
+  display: flex;
 }
+  .secondary-button .button-text {
+    margin-right: 40px;
+    margin-bottom: 0;
+    font-size: 1.2rem;
+  }
+
+  .secondary-button:hover {
+    transition: 0.15s ease-in;
+    background-color: rgba($p-colour-2, 0.1);
+    box-shadow: 0 0 0 2px $p-colour-2;
+    color: $p-colour-2;
+  }
+
+  .secondary-button svg path { stroke: black; }
+  .secondary-button:hover svg path { fill: black; }
 
 .p-cta {
   transition: .15s ease-in;
   display: table;
   padding: 20px;
   border: 0;
-  background-color: #013859;
+  background-color: $p-colour-1;
 }
 
 .p-cta-text {
@@ -786,7 +835,6 @@ input:disabled + label {
 
 .p-cta-icon {
   display: table-cell;
-  background: #07283C;
   min-width: 70px;
   min-height: 70px;
   height: 75px;
@@ -799,21 +847,68 @@ input:disabled + label {
   .p-cta:hover {
     transition: .15s ease-in;
     background-color: $white;
-    box-shadow: 0 0 0 1px $primary-blue;
+    box-shadow: 0 0 0 2px $p-colour-2;
   }
 
-  .p-cta:hover .p-cta-icon {
+  .p-cta:hover .p-cta-icon { transition: .15s ease-in; }
+  .p-cta:hover .p-cta-text { color: $p-colour-2; }
+
+  .p-cta svg path { fill: $white; }
+  .p-cta:hover svg path { fill: $p-colour-2; }
+
+  .p-cta:active {
     transition: .15s ease-in;
-    background-color: $tertiary-navy;
+    background-color: $t-colour-2;
   }
 
-  .p-cta:hover .p-cta-text {
-    color: $tertiary-navy;
+
+  .s-cta {
+    transition: .15s ease-in;
+    display: table;
+    padding: 20px;
+    border: 0;
+    background-color: $white;
+    box-shadow: 0 0 0 2px $p-colour-1;
   }
 
-  .p-cta:hover .svg-fill path {
-    fill: $tertiary-navy;
+  .s-cta-text {
+    width: 250px;
+    display: table-cell;
+    text-align: left;
+    vertical-align: middle;
+    font-size: 1.3rem;
+    line-height: 1.4rem;
+    font-weight: 400;
+    color: $p-colour-2;
+    margin-bottom: 0;
   }
+
+  .s-cta-icon {
+    display: table-cell;
+    min-width: 70px;
+    min-height: 70px;
+    height: 75px;
+    width: 75px;
+    padding: 5%;
+    vertical-align: middle;
+  }
+
+    .s-cta:hover {
+      transition: .15s ease-in;
+      background-color: $p-colour-2;
+      box-shadow: none;
+    }
+
+    .s-cta:hover .s-cta-icon { transition: .15s ease-in; }
+    .s-cta:hover .s-cta-text { color: $white; }
+
+    .s-cta svg path { fill: $p-colour-1; }
+    .s-cta:hover svg path { fill: $white; }
+
+    .s-cta:active {
+      transition: .15s ease-in;
+      background-color: $t-colour-2;
+    }
 
 // ALERTS
 .alert { background-color: $alert-background; display: flex; padding: 20px; border-radius: 0; }
