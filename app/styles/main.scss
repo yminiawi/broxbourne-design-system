@@ -858,7 +858,7 @@ input:disabled + label {
 .primary-button {
   transition: 0.15s ease-in;
   border: 0;
-  background: $p-colour-2;
+  background: $p-colour-3;
   border-radius: 50px;
   padding: 10px 20px;
   color: white;
@@ -872,19 +872,43 @@ input:disabled + label {
 
   .primary-button:hover {
     transition: 0.15s ease-in;
-    background-color: rgba($p-colour-2, 0.1);
-    box-shadow: 0 0 0 2px $p-colour-2;
-    color: $p-colour-2;
+    background-color: $p-colour-2;
   }
 
   .primary-button-stroke { stroke: $white; }
-  .primary-button:hover .primary-button-stroke { stroke: $p-colour-2; }
+  // .primary-button:hover .primary-button-stroke { transition: 0.15s ease-in; stroke: $p-colour-2; }
+
+//BACKUP PRIMARY BUTTON
+// .primary-button {
+//   transition: 0.15s ease-in;
+//   border: 0;
+//   background: $p-colour-2;
+//   border-radius: 50px;
+//   padding: 10px 20px;
+//   color: white;
+//   display: flex;
+// }
+//   .primary-button .button-text {
+//     margin-right: 40px;
+//     margin-bottom: 0;
+//     font-size: 1.2rem;
+//   }
+//
+//   .primary-button:hover {
+//     transition: 0.15s ease-in;
+//     background-color: rgba($p-colour-2, 0.1);
+//     box-shadow: 0 0 0 2px $p-colour-2;
+//     color: $p-colour-2;
+//   }
+//
+//   .primary-button-stroke { stroke: $white; }
+//   .primary-button:hover .primary-button-stroke { stroke: $p-colour-2; }
 
 .secondary-button {
   transition: 0.15s ease-in;
   border: 0;
   box-shadow: 0 0 0 2px $p-colour-2;
-  background: $white;
+  background-color: rgba($p-colour-2, 0.1);
   border-radius: 50px;
   padding: 10px 20px;
   color: white;
@@ -910,9 +934,9 @@ input:disabled + label {
 .p-cta {
   transition: .15s ease-in;
   display: table;
-  padding: 20px;
+  padding: 0;
   border: 0;
-  background-color: $p-colour-1;
+  background-color: $p-colour-2;
 }
 
 .p-cta-text {
@@ -925,16 +949,18 @@ input:disabled + label {
   font-weight: 400;
   color: $white;
   margin-bottom: 0;
+  padding: 39px 20px;
 }
 
 .p-cta-icon {
   display: table-cell;
+  background-color: darken($p-colour-2, 10%);
   min-width: 70px;
   min-height: 70px;
   height: 75px;
   width: 75px;
   padding: 5%;
-  border-radius: 50px;
+  // border-radius: 50px;
   vertical-align: middle;
 }
 
@@ -947,8 +973,9 @@ input:disabled + label {
   .p-cta:hover .p-cta-icon { transition: .15s ease-in; }
   .p-cta:hover .p-cta-text { color: $p-colour-2; }
 
-  .p-cta svg path { fill: $white; }
-  .p-cta:hover svg path { fill: $p-colour-2; }
+  .p-cta-stroke { stroke: $white; }
+  // .p-cta:hover .p-cta-stroke { stroke: $p-colour-2; }
+  .p-cta:hover .button-text { color: $white; }
 
   .p-cta:active {
     transition: .15s ease-in;
@@ -959,10 +986,10 @@ input:disabled + label {
   .s-cta {
     transition: .15s ease-in;
     display: table;
-    padding: 20px;
+    padding: 0;
     border: 0;
     background-color: $white;
-    box-shadow: 0 0 0 2px $p-colour-1;
+    box-shadow: 0 2px 2px 0 rgba($black, .20);
   }
 
   .s-cta-text {
@@ -975,6 +1002,7 @@ input:disabled + label {
     font-weight: 400;
     color: $p-colour-2;
     margin-bottom: 0;
+    padding: 39px 20px;
   }
 
   .s-cta-icon {
@@ -996,7 +1024,7 @@ input:disabled + label {
     .s-cta:hover .s-cta-icon { transition: .15s ease-in; }
     .s-cta:hover .s-cta-text { color: $white; }
 
-    .s-cta svg path { fill: $p-colour-1; }
+    .s-cta svg path { fill: $p-colour-2; }
     .s-cta:hover svg path { fill: $white; }
 
     .s-cta:active {
@@ -1024,20 +1052,20 @@ input:disabled + label {
   display: inline-block;
   position: relative;
   margin-bottom: 5px;
-  color: #005ea5;
+  color: $p-colour-3;
   cursor: pointer;
 }
 
   .details-summary:hover {
     transition: 0.15s ease-in;
-    color: $secondary-blue;
+    // color: $secondary-blue;
   }
 
   .details-summary:focus {
-    outline: 4px solid #ffbf47;
+    outline: 4px solid $t-colour-2;
     outline-offset: -1px;
-    color: #0b0c0c;
-    background: #ffbf47;
+    color: $black;
+    background: $t-colour-2;
   }
 
   .details-summary:before {
@@ -1058,20 +1086,17 @@ input:disabled + label {
 .details-text {
   padding: 15px;
   padding-left: 20px;
-  border-left: 5px solid $mid-grey;
+  border-left: 5px solid $t-colour-2;
 }
 
 
 // CALENDAR
 .calendar-sample {
   width: 100%;
-  // max-width: var(--hello-week-max-width);
   margin: 0 auto;
-  // padding: 1rem;
-  // border-radius: var(--hello-week-border-radius);
   background-color: $white;
-  // box-shadow: 0 2px 20px 8px rgba(0,0,0,.12);
   user-select: none;
+  color: $p-colour-2;
 }
 
 .calendar-header {
@@ -1091,6 +1116,7 @@ input:disabled + label {
 }
 
 .calendar-label {
+  color: $p-colour-2;
   width: 100%;
   font-size: 1.6rem;
   font-weight: 100;
@@ -1100,18 +1126,15 @@ input:disabled + label {
 .calendar-week {
   display: flex;
   background-color: $cal-week-bar;
-  // background-color: var(--hello-week-bg-week);
-  // color: var(--hello-week-color-week);
 }
 
 .calendar-week-day {
+  color: $p-colour-2;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 14.28%;
   padding: 1rem;
-  // background-color: var(--hello-week-bg-day);
-  // color: var(--hello-week-color-day);
   font-size: 1rem;
   font-weight: 400;
   text-transform: uppercase;
@@ -1130,7 +1153,6 @@ input:disabled + label {
   justify-content: center;
   width: 14.28%;
   padding: 1rem;
-  // border-radius: var(--hello-week-border-radius);
   background-color: $white;
 }
   .calendar-day.is-disabled {
@@ -1143,12 +1165,12 @@ input:disabled + label {
   .calendar-day.is-selected,
   .calendar-day.is-active:hover {
     transition: background-color 0.15s ease-in;
-    background-color: $cal-selected;
+    background-color: $t-colour-2;
     color: $white;
   }
 
   .calendar-day.is-today {
-    color: $cal-today;
+    color: $t-colour-2;
     font-weight: 700;
   }
 
@@ -1160,12 +1182,84 @@ input:disabled + label {
 //NEWS ARTICLE
 .news-article { margin-bottom: 30px; }
 .news-heading {
-  background-color: $tertiary-navy;
-  color: $white;
-  font-weight: 300;
-  display: inline;
+  color: $p-colour-2;
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-bottom: 20px;
 }
 .news-body {
-  color: $mid-grey;
-  font-weight: 100;
+  font-size: 1.1rem;
+  font-weight: 300;
 }
+
+//TABLES
+.table-1 { border: 1px solid $p-colour-2;  /*box-shadow: 0 0 0 2px $p-colour-1;*/ }
+.table thead th { vertical-align: middle; }
+.table-1 th { border: 1px solid $p-colour-2; }
+.table-1 thead {
+  border:0;
+  background-color: $p-colour-2;
+  color: $white;
+}
+.table-1 td { border: 1px solid $p-colour-2; }
+
+.table-2 { border: 0; }
+.table-2 thead {
+  border:0;
+  background-color: $p-colour-2;
+  color: $white;
+}
+
+.table-2 tr:nth-child(even) { background: rgba($p-colour-2, 0.1); }
+
+//BREADCRUMBS
+.breadcrumbs {
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
+  color: $p-colour-2;
+}
+
+  .breadcrumbs li {
+    text-transform: none;
+    font-size: 14px;
+    line-height: 1.14286;
+    float: left;
+    background-image: url("/images/separator.png");
+    background-position: 0% 50%;
+    background-repeat: no-repeat;
+    list-style: none;
+    margin-left: 0.6em;
+    margin-bottom: 0.4em;
+    padding-left: 0.9em;
+  }
+
+  .breadcrumbs li:first-child {
+    background-image: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .breadcrumbs ol:before,
+  .breadcrumbs ol li:before {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+    @media (min-width: 641px) {
+      .breadcrumbs li {
+        font-size: 16px;
+        line-height: 1.25; } }
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+      .breadcrumbs li {
+        background-image: url("/images/separator-2x.png");
+          background-size: 6px 11px; } }
+
+    .breadcrumbs li:first-child {
+      background-image: none;
+      margin-left: 0;
+      padding-left: 0;
+    }
+
+  .breadcrumbs a { color: $p-colour-3; }
