@@ -749,55 +749,83 @@ input:disabled + label {
 }
 
 // BUTTONS
+// .primary-button {
+//   transition: .15s ease-in;
+//   background-color: $p-colour-2;
+//   position: relative;
+//   display: inline-block;
+//   padding: 15px;
+//   border: none;
+//   border-radius: 0;
+//   outline: 1px solid transparent;
+//   outline-offset: -1px;
+//   box-shadow: 0 2px 0 $p-colour-1;
+//   font-size: 1em;
+//   line-height: 1.25em;
+//   text-decoration: none;
+//   cursor: pointer;
+//   color: $white;
+//   box-sizing: border-box;
+//   vertical-align: top;
+// }
+//
+//   .primary-button:hover {
+//     transition: .15s ease-in;
+//     background-color: $p-colour-1;
+//     position: relative;
+//     display: inline-block;
+//     padding: 15px;
+//     border: none;
+//     border-radius: 0;
+//     outline: 1px solid transparent;
+//     outline-offset: -1px;
+//     box-shadow: 0 2px 0 $p-colour-1;
+//     font-size: 1em;
+//     line-height: 1.25em;
+//     text-decoration: none;
+//     cursor: pointer;
+//     color: $white;
+//     box-sizing: border-box;
+//     vertical-align: top;
+//   }
+
 .primary-button {
-  transition: .15s ease-in;
-  background-color: $p-colour-2;
-  position: relative;
-  display: inline-block;
-  padding: 15px;
-  border: none;
-  border-radius: 0;
-  outline: 1px solid transparent;
-  outline-offset: -1px;
-  box-shadow: 0 2px 0 $p-colour-1;
-  font-size: 1em;
-  line-height: 1.25em;
-  text-decoration: none;
-  cursor: pointer;
-  color: $white;
-  box-sizing: border-box;
-  vertical-align: top;
-}
-
-  .primary-button:hover {
-    transition: .15s ease-in;
-    background-color: $p-colour-1;
-    position: relative;
-    display: inline-block;
-    padding: 15px;
-    border: none;
-    border-radius: 0;
-    outline: 1px solid transparent;
-    outline-offset: -1px;
-    box-shadow: 0 2px 0 $p-colour-1;
-    font-size: 1em;
-    line-height: 1.25em;
-    text-decoration: none;
-    cursor: pointer;
-    color: $white;
-    box-sizing: border-box;
-    vertical-align: top;
-  }
-
-.secondary-button {
   transition: 0.15s ease-in;
+  border: 0;
   background: $p-colour-2;
   border-radius: 50px;
   padding: 10px 20px;
   color: white;
   display: flex;
 }
+  .primary-button .button-text {
+    margin-right: 40px;
+    margin-bottom: 0;
+    font-size: 1.2rem;
+  }
+
+  .primary-button:hover {
+    transition: 0.15s ease-in;
+    background-color: rgba($p-colour-2, 0.1);
+    box-shadow: 0 0 0 2px $p-colour-2;
+    color: $p-colour-2;
+  }
+
+  .primary-button-stroke { stroke: $white; }
+  .primary-button:hover .primary-button-stroke { stroke: $p-colour-2; }
+
+.secondary-button {
+  transition: 0.15s ease-in;
+  border: 0;
+  box-shadow: 0 0 0 2px $p-colour-2;
+  background: $white;
+  border-radius: 50px;
+  padding: 10px 20px;
+  color: white;
+  display: flex;
+}
   .secondary-button .button-text {
+    color: $p-colour-2;
     margin-right: 40px;
     margin-bottom: 0;
     font-size: 1.2rem;
@@ -805,13 +833,13 @@ input:disabled + label {
 
   .secondary-button:hover {
     transition: 0.15s ease-in;
-    background-color: rgba($p-colour-2, 0.1);
-    box-shadow: 0 0 0 2px $p-colour-2;
-    color: $p-colour-2;
+    background-color: $p-colour-2;
   }
 
-  .secondary-button svg path { stroke: black; }
-  .secondary-button:hover svg path { fill: black; }
+  .secondary-button-stroke { stroke: $p-colour-2; }
+  .secondary-button:hover .secondary-button-stroke { stroke: $white; }
+  .secondary-button:hover .button-text { color: $white; }
+
 
 .p-cta {
   transition: .15s ease-in;
