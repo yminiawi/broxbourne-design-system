@@ -116,11 +116,14 @@ $left-nav-bg: #F2F9F9;
 // PRIMARY
 $p-colour-1: #007F87;
 $p-colour-2: #00496C;
+$p-colour-3: #A9248C;
 
 // SECONDARY
 $s-colour-1: #E3E9EE;
 $s-colour-2: #EEF3F7;
 $s-colour-3: #EBF8F7;
+$s-colour-4: #333333;
+$s-colour-5: #6F777B;
 
 // TERTIARY
 $t-colour-1: #DB0A5B;
@@ -154,9 +157,12 @@ $p-blue-25: tint( $primary-blue, 75% );
 // COLOUR FILLS
 .p-col-1-bg { background-color: $p-colour-1; }
 .p-col-2-bg { background-color: $p-colour-2; }
+.p-col-3-bg { background-color: $p-colour-3; }
 .s-col-1-bg { background-color: $s-colour-1; }
 .s-col-2-bg { background-color: $s-colour-2; }
 .s-col-3-bg { background-color: $s-colour-3; }
+.s-col-4-bg { background-color: $s-colour-4; }
+.s-col-5-bg { background-color: $s-colour-5; }
 .t-col-1-bg { background-color: $t-colour-1; }
 .t-col-2-bg { background-color: $t-colour-2; }
 .t-col-3-bg { background-color: $t-colour-3; }
@@ -262,33 +268,70 @@ h3, .h3 { font-size: 1.2rem; font-weight: 500; color: $mid-grey; }
 h4, .h4 { font-size: 1rem; font-weight: 500; color: $black; }
 p, .p { font-weight: 300;}
 p.leading { }
-a, .a { color: $p-colour-1; font-weight: 500; }
-a:hover, .a:hover { background-color: $form-active-border; outline: 3px solid $form-active-border; }
+a, .a { color: $p-colour-3; font-weight: 500; text-decoration: underline; }
+a:visited, .a:visited { color: $p-colour-1; }
+a:hover, .a:hover { background-color: rgba($p-colour-1, .1); }
 a:active, .a:active { }
-a:visited, .a:visited { }
 a:focus, .a:focus { background-color: $form-active-border; outline: 3px solid $form-active-border; }
+ul { list-style: none; /* Remove default bullets */ }
+  ul li::before {
+    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: $p-colour-1; /* Change the color */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1em; /* Also needed for space (tweak if needed) */
+    margin-left: -1em; /* Also needed for space (tweak if needed) */
+  }
+
+  // ul li a:hover {
+  //   color: $white;
+  // }
+
+ol {
+  list-style: none;
+  counter-reset: li;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 40px;
+}
+ol li { counter-increment: li; }
+
+  ol li:before {
+    content: counter(li);
+    color: $p-colour-3;
+    font-size: 0.9rem;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1.5em;
+    margin-right: 0.5em;
+    text-align: right;
+    direction: rtl;
+  }
 
 blockquote{
   font-size: 1.4em;
-  width:100%;
-  margin:50px auto;
-  font-style:italic;
-  background-color: $white;
-  color: $dark-grey;
-  padding:1.2em 30px 1.2em 75px;
-  border-left:8px solid $secondary-teal ;
-  line-height:1.6;
+  width: 100%;
+  margin: 50px auto;
+  font-weight: 500;
+  background-color: #FFFFFF;
+  color: #007F87;
+  padding: 1.2em 30px 1.2em 4rem;
+  line-height: 1.6;
   position: relative;
+  background-color: rgba($p-colour-1, 0.1);
 }
 
-blockquote::before{
-  font-family:Arial;
-  content: "\201C";
-  color: $secondary-teal;
-  font-size:4em;
+blockquote::before {
+  content: url(/images/quote.svg);
+  top: 0;
+  height: 100%;
+  padding-right: 20px;
+  padding-top: 20px;
+  color: $p-colour-1;
   position: absolute;
-  left: 10px;
-  top:-10px;
+  left: 0;
+  background-color: $white;
 }
 
 blockquote::after{
@@ -302,6 +345,27 @@ blockquote span{
   font-weight: bold;
   margin-top:1em;
 }
+
+// blockquote {
+//     margin: 3em;
+//     padding: 0 3em;
+//     position: relative;
+// }
+//
+// blockquote::before {
+//     content:'"';
+//     left: -40px;
+//     border-right: 1px solid $p-colour-1;
+// }
+//
+//
+// blockquote::before, blockquote::after {
+//     top: 50%;
+//     color: #F1722E;
+//     font-size: 124px;
+//     position: absolute;
+//     margin-top:-48px;
+// }
 
 /* CUSTOM */
 .left {
