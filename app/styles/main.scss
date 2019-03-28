@@ -1219,6 +1219,8 @@ input:disabled + label {
   color: $p-colour-2;
 }
 
+  .breadcrumbs ol { padding: 0; }
+
   .breadcrumbs li {
     text-transform: none;
     font-size: 14px;
