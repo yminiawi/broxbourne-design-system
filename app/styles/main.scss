@@ -390,6 +390,19 @@ blockquote span{
   // overflow-y: scroll;
 }
 
+@media (max-width: 992px) {
+  .left {
+    position: inherit;
+    overflow: hidden;
+  }
+
+  .right {
+    margin: 0;
+    padding: 10% 5%;
+  }
+}
+
+
 /* LOGO */
 .logo-container {
   padding: 50px;
