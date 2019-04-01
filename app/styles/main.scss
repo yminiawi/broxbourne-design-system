@@ -398,10 +398,12 @@ blockquote span{
 }
 .logo {
   display: flex;
-  // margin-bottom: 50px;
-  // max-width: 300px;
-
   display: table;
+}
+
+.logo a {
+  text-decoration: none;
+  display: block;
 }
 
 .logo-mark {
@@ -435,7 +437,7 @@ blockquote span{
   width: 100%;
   margin-bottom: 40px;
   list-style-type: none;
-  overflow: auto;
+  overflow: hidden;
 }
   .navigation h3 { color: $dark-grey; }
   .navigation li { padding: 5px; }
