@@ -273,7 +273,7 @@ p.leading { }
 a, .a { color: $p-colour-3; font-weight: 500; text-decoration: underline; }
 a:visited, .a:visited { color: $p-colour-1; }
 a:hover, .a:hover { background-color: rgba($p-colour-1, .1); }
-a:active, .a:active { }
+//a:active, .a:active { }
 a:focus, .a:focus { background-color: $form-active-border; outline: 3px solid $form-active-border; }
 ul { list-style: none; /* Remove default bullets */ }
   ul li::before {
@@ -282,6 +282,7 @@ ul { list-style: none; /* Remove default bullets */ }
     display: inline-block; /* Needed to add space between the bullet and the text */
     width: 1em; /* Also needed for space (tweak if needed) */
     margin-left: -1em; /* Also needed for space (tweak if needed) */
+    // display: none;
   }
 
   // ul li a:hover {
@@ -447,7 +448,7 @@ blockquote span{
       transition: border 0.15s ease-in;
     }
 
-    .navigation li .active,
+    .navigation li .primary-nav-active,
     .navigation li a:hover {
       color: $secondary-teal;
       background: none;
@@ -459,6 +460,8 @@ blockquote span{
       transition: padding-left 0.15s ease-in;
       transition: border 0.15s ease-in;
     }
+
+    .navigation li.nav-item { display: flex; }
 
 .nav-item a,
 .nav-item a:hover{
@@ -567,6 +570,10 @@ blockquote span{
   }
 
 /* TYPOGRAPHY */
+.nav-tabs li::before {
+  content: none;
+}
+
 .type-specimen {
   display: inline-block;
   font-size: 2rem;

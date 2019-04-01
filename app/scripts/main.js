@@ -3,6 +3,13 @@ console.log('\'Allo \'Allo!');
 // Scrollspy
 $('.right').scrollspy({ target: '#nav-bar' })
 
+// Tabs
+$('#font-nav a').on('click', function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
+$('#font-nav li:first-child a').tab('show') // Select first tab
+
 /* Smooth scrolling
 $(document).ready(function(){
   // Add smooth scrolling to all links
@@ -44,9 +51,10 @@ $(document).ready(function(){
 // 	$( this ).addClass( 'active' );
 // });
 $(".nav-link").on("click", function(){
-   $(".navigation").find(".active").removeClass("active");
-   $(this).addClass("active");
+   $(".navigation").find(".primary-nav-active").removeClass("primary-nav-active");
+   $(this).addClass("primary-nav-active");
 });
+
 
 // BACK TO TOP
 $(document).ready(function(){
