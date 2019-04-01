@@ -274,7 +274,9 @@ a, .a { color: $p-colour-3; font-weight: 500; text-decoration: underline; }
 a:visited, .a:visited { color: $p-colour-1; }
 a:hover, .a:hover { background-color: rgba($p-colour-1, .1); }
 //a:active, .a:active { }
-a:focus, .a:focus { background-color: $form-active-border; outline: 3px solid $form-active-border; }
+a:focus, .a:focus {
+  background-color: $t-colour-2;
+  outline: 3px solid $t-colour-2; }
 ul { list-style: none; /* Remove default bullets */ }
   ul li::before {
     content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
@@ -452,10 +454,10 @@ blockquote span{
   list-style-type: none;
   overflow: hidden;
 }
-  .navigation h3 { color: $dark-grey; }
+  .navigation h3 { color: $p-colour-3; }
   .navigation li { padding: 5px; }
     .navigation li a {
-      color: $dark-grey;
+      color: $p-colour-3;
       font-weight: 300;
       padding-left: 10px;
       height: 30px;
@@ -465,10 +467,9 @@ blockquote span{
 
     .navigation li .primary-nav-active,
     .navigation li a:hover {
-      color: $secondary-teal;
-      background: none;
+      color: $p-colour-1;
+      background: rgba($p-colour-1, 0.1);
       outline: 0;
-      text-decoration: none;
       border-left: 5px solid $secondary-teal;
       margin-left: -5px;
       padding-left: 10px;
@@ -476,6 +477,7 @@ blockquote span{
       transition: border 0.15s ease-in;
     }
 
+    .navigation .primary-nav-active h3 { color: $p-colour-1; }
     .navigation li.nav-item { display: flex; }
 
 .nav-item a,
@@ -752,7 +754,7 @@ button:focus,
     }
 
     .multiple-choice [type=radio]:focus + label::before {
-      box-shadow: 0 0 0 4px $form-active-border;
+      box-shadow: 0 0 0 4px $t-colour-2;
     }
 
     .multiple-choice input:checked + label::after {
