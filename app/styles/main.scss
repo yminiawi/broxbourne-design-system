@@ -1058,7 +1058,8 @@ input:disabled + label {
 
   .details-summary:hover {
     transition: 0.15s ease-in;
-    // color: $secondary-blue;
+    color: $p-colour-1;
+    background: rgba($p-colour-1, 0.1);
   }
 
   .details-summary:focus {
@@ -1269,6 +1270,7 @@ input:disabled + label {
     }
 
   .breadcrumbs a { color: $p-colour-3; }
+    .breadcrumbs a:hover { color: $p-colour-1; }
 
   //IN THIS SECTION
   .in-this-section {
@@ -1335,6 +1337,7 @@ input:disabled + label {
 .itl-link {
   text-decoration: underline !important;
   color: $p-colour-3 !important;
+  cursor: pointer;
 }
   .itl-list .itl-link:hover {
     font-weight: 600;
