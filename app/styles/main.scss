@@ -229,6 +229,8 @@ $p-blue-25: tint( $primary-blue, 75% );
 .marb-5 { margin-bottom: 5px; }
 .marb-50 { margin-bottom: 50px; }
 .mb-10 { margin-bottom: 10px; }
+.mb-20 { margin-bottom: 20px; }
+.mb-30 { margin-bottom: 30px; }
 .m0-auto { margin: 0 auto; }
 
 //FORCE IE-9 TO DISPLAY SVG CORRECTLY
@@ -910,6 +912,8 @@ input:disabled + label {
   }
 
   .primary-button-stroke { stroke: $white; }
+
+a .button-text { text-decoration: none; }
   // .primary-button:hover .primary-button-stroke { transition: 0.15s ease-in; stroke: $p-colour-2; }
 
 //BACKUP PRIMARY BUTTON
