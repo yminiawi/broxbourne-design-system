@@ -55,6 +55,11 @@ $(".nav-link").on("click", function(){
    $(this).addClass("primary-nav-active");
 });
 
+$(".navigation").on("click", function(){
+   $("ul").find(".active-nav-ul").removeClass(".active-nav-ul");
+   $(this).addClass(".active-nav-ul");
+});
+
 
 // BACK TO TOP
 $(document).ready(function(){
