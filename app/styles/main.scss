@@ -1496,3 +1496,47 @@ a .button-text { text-decoration: none; }
     background-color: $black;
     text-align: center;
   }
+
+//PAGINATION NAV BUTTONS
+.pagination-nav { margin: 0; padding: 0; margin-bottom: 30px; list-style: none; }
+  .pagination-nav li:before { display: none; }
+  .pagination-nav a { color: $p-colour-3; }
+  .pagination-nav a:hover { color: $p-colour-1; }
+
+  .pagination-nav .pagination-link-icon {
+    background-color: $p-colour-3;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+  }
+
+  .pagination-nav a:hover .pagination-link-icon {
+    // transition: background-color 0.15s ease-in-out;
+    background-color: $p-colour-1;
+  }
+
+  .pagination-nav .link-text { color: $p-colour-2; }
+  .pagination-nav .gem-c-pagination__link-title { display: inline; }
+  .pagination-nav a { display: block; padding: 20px 0; text-decoration: none; }
+    .pagination-nav a:hover { background-color: rgba($p-colour-1, 0.1); }
+
+  .pagination-nav .link-text {
+    font-weight: 700;
+    text-transform: none;
+    text-decoration: none;
+    font-size: 19px;
+    line-height: 1.25;
+    margin-left: 10px;
+    vertical-align: top
+  }
+
+  .pagination-nav .link-name {
+    text-decoration: underline;
+    display: block;
+    margin-left: 54px;
+    margin-top: -15px;
+  }
+
+  .pagination-nav .previous,
+  .pagination-nav .next { display: list-item; }
