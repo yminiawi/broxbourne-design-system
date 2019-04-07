@@ -96,6 +96,8 @@
               <ul class="navigation nav flex-column active-nav-ul">
                 <li class="nav-item"><a data-spy="scroll" href="#start-content" class="nav-link primary-nav-active"><h3>Patterns</h3></a></li>
                 <li class="nav-item"><a data-spy="scroll" href="#forms-p" class="nav-link">Forms</a></li>
+                <li class="nav-item"><a data-spy="scroll" href="#checking-answers" class="nav-link">Checking answers</a></li>
+                <li class="nav-item"><a data-spy="scroll" href="#error-on-page" class="nav-link">Error on a page</a></li>
                 <!-- <li class="nav-item"><a data-spy="scroll" href="#grid" class="nav-link">Grid layout</a></li>
                 <li class="nav-item"><a data-spy="scroll" href="#validation" class="nav-link">Validation</a></li> -->
               </ul>
@@ -141,51 +143,11 @@
               </div>
             </div><!-- end of asking for date example -->
 
-            <h3>Error validation</h3>
-            <div class="example sub-section">
-              <div class="form-group form-group-error">
-                <fieldset class="fieldset" aria-describedby="passport-issued-hint passport-issued-error" role="group">
-                  <legend class="fieldset-legend fieldset-legend-xl">
-                    <h1 class="fieldset-heading-xl">When was your passport issued?</h1>
-                  </legend>
-                  <span id="passport-issued-hint" class="hint-text">
-                    For example, 12 11 2007
-                  </span>
-                  <span id="passport-issued-error" class="error-message">
-                    <span class="visually-hidden">Error:</span> The date your passport was issued must be in the past
-                  </span>
-                  <div class="date-input" id="passport-issued">
-                    <div class="date-input-item">
-                      <div class="form-group">
-                        <label class="label date-input-label" for="passport-issued-day">
-                          Day
-                        </label>
-                        <input class="text-input date-input input-width-2 input-error" id="passport-issued-day" name="passport-issued-day" type="number" value="6" pattern="[0-9]*">
-                      </div>
-                    </div>
-                    <div class="date-input-item">
-                      <div class="form-group">
-                        <label class="label date-input-label" for="passport-issued-month">
-                          Month
-                        </label>
-                        <input class="text-input date-input input-width-2 input-error" id="passport-issued-month" name="passport-issued-month" type="number" value="3" pattern="[0-9]*">
-                      </div>
-                    </div>
-                    <div class="date-input-item">
-                      <div class="form-group">
-                        <label class="label date-input-label" for="passport-issued-year">
-                          Year
-                        </label>
-                        <input class="text-input date-input input-width-4 input-error" id="passport-issued-year" name="passport-issued-year" type="number" value="2076" pattern="[0-9]*">
-                      </div>
-                    </div>
-                  </div>
-                </fieldset>
-              </div>
-            </div><!-- end of asking for error validation -->
+          </div><!-- end of forms patterns -->
 
-
-            <h3>Checking your answers before submitting</h3>
+          <div id="checking-answers" class="guide-section example">
+            <h2>Checking your answers before submitting</h2>
+            <p>Let users check their answers before submitting information to a service.</p>
             <div class="example sub-section">
               <div>
                 <h1 class="heading-xl">Check your answers before sending your application</h1>
@@ -270,12 +232,53 @@
 
                 <p>By submitting this notification you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
 
-                <button type="submit" class="primary-button">Accept and send</button>
-
+                <button type="submit" class="primary-button">
+                  <p class="button-text">Accept and send</p>
+                  <div class="button-icon">
+                    <svg width="11px" height="19px" viewBox="0 0 11 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g id="DESKTOP" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+                            <g id="StyleTile" transform="translate(-310.000000, -4997.000000)" class="primary-button-stroke" stroke-width="2">
+                                <polyline id="arrow" points="311.559476 4998.31818 319.741294 5006.5 311.559476 5014.68182"></polyline>
+                            </g>
+                        </g>
+                    </svg>
+                  </div>
+                </button>
               </div><!-- end of containing form -->
             </div><!-- end of asking for date example -->
+          </div><!-- end of checking-answers -->
 
-          </div><!-- end of forms patterns -->
+          <div id="error-on-page" class="example guide-section">
+            <h2>Error on page</h2>
+            <p>You must link the errors in the error summary to the answer they relate to.</p>
+            <p>For questions that require a user to answer using a single field, like a file upload, select, textarea, text input or character count, link to the field.</p>
+            <div class="example">
+              <div class="error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="error-summary">
+                <h2 class="error-summary-title" id="error-summary-title">
+                  There is a problem
+                </h2>
+                <div class="error-summary-body">
+                  <ul class="list error-summary-list">
+                    <li>
+                      <a href="#name">Enter your full name</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <h1 class="heading-xl">Your details</h1>
+
+              <div class="form-group form-group-error">
+                <label for="name">
+                  Full name
+                </label>
+                <span id="name-error" class="error-message">
+                  <span class="visually-hidden">Error:</span> Enter your full name
+                </span>
+                <input class="text-input input-error" id="name" name="name" type="text" aria-describedby="name-error">
+              </div>
+            </div>
+          </div><!--end of error on page -->
 
         </div><!-- end of right -->
       </div><!-- end of row -->

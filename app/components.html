@@ -92,6 +92,8 @@
                 <li class="nav-item"><a data-spy="scroll" href="#blockquote" class="nav-link">Blockquote</a></li>
                 <li class="nav-item"><a data-spy="scroll" href="#breadcrumbs" class="nav-link">Breadcrumbs</a></li>
                 <li class="nav-item"><a data-spy="scroll" href="#in-this-section" class="nav-link">In this section</a></li>
+                <li class="nav-item"><a data-spy="scroll" href="#pagination-nav" class="nav-link">Pagination</a></li>
+                <li class="nav-item"><a data-spy="scroll" href="#summary-list" class="nav-link">Summary list</a></li>
               </ul>
               <ul class="navigation nav flex-column">
                 <li class="nav-item"><a href="patterns.html" class="nav-link"><h3>Patterns</h3></a></li>
@@ -660,6 +662,7 @@ color: #253858; margin-bottom: 24px; }</code></pre>
           </div><!-- end of in-this-section id -->
 
           <div id="pagination-nav" class="guide-section example">
+            <h2>Pagination</h2>
             <ul class="pagination-nav">
               <li class="previous">
                 <a href="#">
@@ -685,6 +688,110 @@ color: #253858; margin-bottom: 24px; }</code></pre>
               </li>
             </ul>
           </div><!-- end of pagination-nav -->
+
+          <div id="summary-list" class="guide-section example">
+            <h2>Summary list</h2>
+            <div class="example">
+              <dl class="summary-list">
+                <div class="summary-list-row">
+                  <dt class="summary-list-key">Previous application number</dt>
+                  <dd class="summary-list-value">502135326</dd>
+                  <dd class="summary-list-actions">
+                    <a href="#">Change</a>
+                  </dd>
+                </div>
+                <div class="summary-list-row">
+                  <dt class="summary-list-key">Licence type</dt>
+                  <dd class="summary-list-value">For personal use</dd>
+                  <dd class="summary-list-actions">
+                    <a href="#">Change</a>
+                  </dd>
+                </div>
+                <div class="summary-list-row">
+                  <dt class="summary-list-key">Home address</dt>
+                  <dd class="summary-list-value">
+                    72 Guild Street
+                    <br>London
+                    <br>SE23 6FH
+                  </dd>
+                  <dd class="summary-list-actions">
+                    <a href="#">Change</a>
+                  </dd>
+                </div>
+                <div class="summary-list-row">
+                  <dt class="summary-list-key">Licence period</dt>
+                  <dd class="summary-list-value">Valid for 6 months</dd>
+                  <dd class="summary-list-actions">
+                    <a href="#">Change</a>
+                  </dd>
+                </div>
+              </dl>
+            </div><!-- end of example -->
+          </div><!-- end of summary-list -->
+
+          <div id="error-summary" class="guide-section example">
+            <h2>Error summary</h2>
+            <div class="example">
+              <div class="error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1">
+                <h2 class="error-summary-title" id="error-summary-title">
+                  There is a problem
+                </h2>
+                <div class="error-summary-body">
+                  <ul class="error-summary-list">
+                    <li>
+                        <a href="#passport-issued-error">The date your passport was issued must be in the past</a>
+                    </li>
+                    <li>
+                      <a href="#postcode-error">Enter a postcode, like AA1 1AA</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div><!-- end of error-summary -->
+
+          <div id="error-message" class="guide-section example">
+            <h3>Error validation</h3>
+            <div class="form-group form-group-error">
+              <fieldset class="fieldset" aria-describedby="passport-issued-hint passport-issued-error" role="group">
+                <legend class="fieldset-legend fieldset-legend-xl">
+                  <h1 class="fieldset-heading-xl">When was your passport issued?</h1>
+                </legend>
+                <span id="passport-issued-hint" class="hint-text">
+                  For example, 12 11 2007
+                </span>
+                <span id="passport-issued-error" class="error-message">
+                  <span class="visually-hidden">Error:</span> The date your passport was issued must be in the past
+                </span>
+                <div class="date-input" id="passport-issued">
+                  <div class="date-input-item">
+                    <div class="form-group">
+                      <label class="label date-input-label" for="passport-issued-day">
+                        Day
+                      </label>
+                      <input class="text-input date-input input-width-2 input-error" id="passport-issued-day" name="passport-issued-day" type="number" value="6" pattern="[0-9]*">
+                    </div>
+                  </div>
+                  <div class="date-input-item">
+                    <div class="form-group">
+                      <label class="label date-input-label" for="passport-issued-month">
+                        Month
+                      </label>
+                      <input class="text-input date-input input-width-2 input-error" id="passport-issued-month" name="passport-issued-month" type="number" value="3" pattern="[0-9]*">
+                    </div>
+                  </div>
+                  <div class="date-input-item">
+                    <div class="form-group">
+                      <label class="label date-input-label" for="passport-issued-year">
+                        Year
+                      </label>
+                      <input class="text-input date-input input-width-4 input-error" id="passport-issued-year" name="passport-issued-year" type="number" value="2076" pattern="[0-9]*">
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div><!-- end of form-error group -->
+          </div><!-- end of error-message -->
 
         </div><!-- end of right -->
       </div><!-- end of row -->
