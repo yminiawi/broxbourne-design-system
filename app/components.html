@@ -94,6 +94,8 @@
                 <li class="nav-item"><a data-spy="scroll" href="#in-this-section" class="nav-link">In this section</a></li>
                 <li class="nav-item"><a data-spy="scroll" href="#pagination-nav" class="nav-link">Pagination</a></li>
                 <li class="nav-item"><a data-spy="scroll" href="#summary-list" class="nav-link">Summary list</a></li>
+                <li class="nav-item"><a data-spy="scroll" href="#error-summary" class="nav-link">Error summary</a></li>
+                <li class="nav-item"><a data-spy="scroll" href="#error-message" class="nav-link">Error message</a></li>
               </ul>
               <ul class="navigation nav flex-column">
                 <li class="nav-item"><a href="patterns.html" class="nav-link"><h3>Patterns</h3></a></li>
@@ -663,30 +665,33 @@ color: #253858; margin-bottom: 24px; }</code></pre>
 
           <div id="pagination-nav" class="guide-section example">
             <h2>Pagination</h2>
-            <ul class="pagination-nav">
-              <li class="previous">
-                <a href="#">
-                  <span class="pagination-link-title">
-                    <img class="pagination-link-icon" src="images/previous-arrow.svg" />
-                    <span class="link-text">
-                      Previous
+            <p>These navigation buttons should be used to help a user navigate through a linear sequence of information pages.</p>
+            <div class="example">
+              <ul class="pagination-nav">
+                <li class="previous">
+                  <a href="#previous-page">
+                    <span class="pagination-link-title">
+                      <img class="pagination-link-icon" src="images/previous-arrow.svg" />
+                      <span class="link-text">
+                        Previous
+                      </span>
                     </span>
-                  </span>
-                    <span class="link-name">What we can do to help your situation</span>
-                </a>
-              </li>
-              <li class="next">
-                <a href="#">
-                  <span class="pagination-link-title">
-                    <img class="pagination-link-icon" src="images/next-arrow.svg" />
-                    <span class="link-text">
-                      Next
+                      <span class="link-name">What we can do to help your situation</span>
+                  </a>
+                </li>
+                <li class="next">
+                  <a href="#next-page">
+                    <span class="pagination-link-title">
+                      <img class="pagination-link-icon" src="images/next-arrow.svg" />
+                      <span class="link-text">
+                        Next
+                      </span>
                     </span>
-                  </span>
-                  <span class="link-name">Still need help?</span>
-                </a>
-              </li>
-            </ul>
+                    <span class="link-name">Still need help?</span>
+                  </a>
+                </li>
+              </ul>
+            </div><!-- end of example -->
           </div><!-- end of pagination-nav -->
 
           <div id="summary-list" class="guide-section example">
@@ -697,14 +702,14 @@ color: #253858; margin-bottom: 24px; }</code></pre>
                   <dt class="summary-list-key">Previous application number</dt>
                   <dd class="summary-list-value">502135326</dd>
                   <dd class="summary-list-actions">
-                    <a href="#">Change</a>
+                    <a href="#summary-row-1">Change</a>
                   </dd>
                 </div>
                 <div class="summary-list-row">
                   <dt class="summary-list-key">Licence type</dt>
                   <dd class="summary-list-value">For personal use</dd>
                   <dd class="summary-list-actions">
-                    <a href="#">Change</a>
+                    <a href="#summary-row-2">Change</a>
                   </dd>
                 </div>
                 <div class="summary-list-row">
@@ -715,14 +720,14 @@ color: #253858; margin-bottom: 24px; }</code></pre>
                     <br>SE23 6FH
                   </dd>
                   <dd class="summary-list-actions">
-                    <a href="#">Change</a>
+                    <a href="#summary-row-3">Change</a>
                   </dd>
                 </div>
                 <div class="summary-list-row">
                   <dt class="summary-list-key">Licence period</dt>
                   <dd class="summary-list-value">Valid for 6 months</dd>
                   <dd class="summary-list-actions">
-                    <a href="#">Change</a>
+                    <a href="#summary-row-4">Change</a>
                   </dd>
                 </div>
               </dl>
@@ -751,46 +756,49 @@ color: #253858; margin-bottom: 24px; }</code></pre>
           </div><!-- end of error-summary -->
 
           <div id="error-message" class="guide-section example">
-            <h3>Error validation</h3>
-            <div class="form-group form-group-error">
-              <fieldset class="fieldset" aria-describedby="passport-issued-hint passport-issued-error" role="group">
-                <legend class="fieldset-legend fieldset-legend-xl">
-                  <h1 class="fieldset-heading-xl">When was your passport issued?</h1>
-                </legend>
-                <span id="passport-issued-hint" class="hint-text">
-                  For example, 12 11 2007
-                </span>
-                <span id="passport-issued-error" class="error-message">
-                  <span class="visually-hidden">Error:</span> The date your passport was issued must be in the past
-                </span>
-                <div class="date-input" id="passport-issued">
-                  <div class="date-input-item">
-                    <div class="form-group">
-                      <label class="label date-input-label" for="passport-issued-day">
-                        Day
-                      </label>
-                      <input class="text-input date-input input-width-2 input-error" id="passport-issued-day" name="passport-issued-day" type="number" value="6" pattern="[0-9]*">
+            <h2>Error message</h2>
+            <div class="example">
+              <div class="form-group form-group-error">
+                <fieldset class="fieldset" aria-describedby="passport-issued-hint passport-issued-error" role="group">
+                  <!-- <legend class="fieldset-legend fieldset-legend-xl">
+                    <h1 class="fieldset-heading-xl">When was your passport issued?</h1>
+                  </legend> -->
+                  <label>When was your passport issued?</label>
+                  <span id="passport-issued-hint" class="hint-text">
+                    For example, 12 11 2007
+                  </span>
+                  <span id="passport-issued-error" class="error-message">
+                    <span class="visually-hidden">Error:</span> The date your passport was issued must be in the past
+                  </span>
+                  <div class="date-input" id="passport-issued">
+                    <div class="date-input-item">
+                      <div class="form-group">
+                        <label class="label date-input-label" for="passport-issued-day">
+                          Day
+                        </label>
+                        <input class="text-input date-input input-width-2 input-error" id="passport-issued-day" name="passport-issued-day" type="number" value="6" pattern="[0-9]*">
+                      </div>
+                    </div>
+                    <div class="date-input-item">
+                      <div class="form-group">
+                        <label class="label date-input-label" for="passport-issued-month">
+                          Month
+                        </label>
+                        <input class="text-input date-input input-width-2 input-error" id="passport-issued-month" name="passport-issued-month" type="number" value="3" pattern="[0-9]*">
+                      </div>
+                    </div>
+                    <div class="date-input-item">
+                      <div class="form-group">
+                        <label class="label date-input-label" for="passport-issued-year">
+                          Year
+                        </label>
+                        <input class="text-input date-input input-width-4 input-error" id="passport-issued-year" name="passport-issued-year" type="number" value="2076" pattern="[0-9]*">
+                      </div>
                     </div>
                   </div>
-                  <div class="date-input-item">
-                    <div class="form-group">
-                      <label class="label date-input-label" for="passport-issued-month">
-                        Month
-                      </label>
-                      <input class="text-input date-input input-width-2 input-error" id="passport-issued-month" name="passport-issued-month" type="number" value="3" pattern="[0-9]*">
-                    </div>
-                  </div>
-                  <div class="date-input-item">
-                    <div class="form-group">
-                      <label class="label date-input-label" for="passport-issued-year">
-                        Year
-                      </label>
-                      <input class="text-input date-input input-width-4 input-error" id="passport-issued-year" name="passport-issued-year" type="number" value="2076" pattern="[0-9]*">
-                    </div>
-                  </div>
-                </div>
-              </fieldset>
-            </div><!-- end of form-error group -->
+                </fieldset>
+              </div><!-- end of form-error group -->
+            </div><!-- end of example -->
           </div><!-- end of error-message -->
 
         </div><!-- end of right -->
