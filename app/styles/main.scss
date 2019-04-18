@@ -154,7 +154,7 @@ $p-blue-25: tint( $primary-blue, 75% );
 // .height0 { height: 0%; }
 
 /* HELPER CLASSES */
-// COLOUR FILLS
+// COLOUR BACKGROUNDS
 .p-col-1-bg { background-color: $p-colour-1; }
 .p-col-2-bg { background-color: $p-colour-2; }
 .p-col-3-bg { background-color: $p-colour-3; }
@@ -168,20 +168,6 @@ $p-blue-25: tint( $primary-blue, 75% );
 .t-col-1-bg { background-color: $t-colour-1; }
 .t-col-2-bg { background-color: $t-colour-2; }
 .t-col-3-bg { background-color: $t-colour-3; }
-
-.p-blue-fill { background-color: $primary-blue; }
-.p-blue-50-fill { background-color: $p-blue-50; }
-.p-blue-25-fill { background-color: $p-blue-25; }
-.s-blue-fill { background-color: $secondary-blue; }
-.s-teal-fill { background-color: $secondary-teal; }
-.t-navy-fill { background-color: $tertiary-navy; }
-.t-purple-fill { background-color: $tertiary-purple; }
-.g1-fill { background-color: $dark-grey; }
-.g2-fill { background-color: $mid-grey; }
-.g3-fill { background-color: $light-grey; }
-.w-fill { background-color: $white; }
-.l-orange-fill { background-color: $light-orange; }
-.d-orange-fill { background-color: $dark-orange; }
 
 // COLOUR
 .p-blue { color: $primary-blue; }
@@ -266,11 +252,12 @@ img[src$=".svg"] {width: 100%;}
 
 /* TYPOGRAPHY */
 body, .body { background: $p-colour-1; padding: 0; font-family: 'Roboto', "Helvetica Neue", sans-serif; font-weight: 300; overflow-x: hidden; }
-h1, .h1 { font-size: 2.2rem; line-height: 2.6rem; font-weight: 100; }
-h2, .h2 { font-size: 1.4rem; line-height: 2rem; font-weight: 500; color: $p-colour-2; }
-h3, .h3 { font-size: 1.2rem; font-weight: 500; color: $s-colour-5; }
-h4, .h4 { font-size: 1rem; font-weight: 500; color: $black; }
-p, .p { font-weight: 300;}
+h1, h2, h3, h4, .h1, .h2, .h3, .h4 { color: $p-colour-2; }
+h1, .h1 { font-size: 2.8rem; line-height: 2.7rem; font-weight: 500; }
+h2, .h2 { font-size: 1.8rem; line-height: 2.1rem; font-weight: 500; }
+h3, .h3 { font-size: 1.4rem; line-height: 1.6rem; font-weight: 700; /*color: $s-colour-5;*/ }
+h4, .h4 { font-size: 1.1rem; line-height: 1.6rem; font-weight: 700; /*color: $black;*/ }
+p, .p { font-size: 1.1rem; font-weight: 300;}
 p.leading { }
 a, .a { color: $p-colour-3; font-weight: 500; text-decoration: underline; }
 a:visited, .a:visited { color: $p-colour-1; }
@@ -281,6 +268,16 @@ a:focus, .a:focus {
   outline: 3px solid $t-colour-2;
   color: $black;
 }
+
+@media (max-width: 992px) {
+  h1, .h1 { font-size: 1.8rem; line-height: 2.1rem; }
+  h2, .h2 { font-size: 1.4rem; line-height: 1.6rem; }
+  h3, .h3 { font-size: 1.1rem; line-height: 1.6rem; }
+  h4, .h4 { font-size: 1rem; line-height: 1.4rem; }
+  p, .p { font-size: 1rem; }
+}
+
+
 ul { list-style: none; /* Remove default bullets */ }
   ul li::before {
     content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
@@ -575,6 +572,10 @@ blockquote span {
   width: 32%;
   margin: 0% 1% 1% 0%;
   box-shadow: 0 0 0 1px rgba(63, 63, 68, 0.05), 0 1px 3px 0 rgba(63, 63, 68, 0.15);
+}
+
+@media (max-width: 992px) {
+  .swatch { width: 100%; }
 }
   .swatch h4 { font-size: 1.1rem; font-weight: 600; }
   .swatch p { margin-bottom: 5px; }
