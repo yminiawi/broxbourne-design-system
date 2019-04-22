@@ -251,46 +251,58 @@ img[src$=".svg"] {width: 100%;}
 // }
 
 /* TYPOGRAPHY */
+// MAIN CONTENT
+html { font-size: 16px; }
 body, .body { background: $p-colour-1; padding: 0; font-family: 'Roboto', "Helvetica Neue", sans-serif; font-weight: 300; overflow-x: hidden; }
 h1, h2, h3, h4, .h1, .h2, .h3, .h4 { color: $p-colour-2; -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased; }
-h1, .h1 { font-size: 2.8rem; line-height: 2.7rem; font-weight: 500; }
-h2, .h2 { font-size: 1.8rem; line-height: 2.1rem; font-weight: 500; }
-h3, .h3 { font-size: 1.4rem; line-height: 1.6rem; font-weight: 700; /*color: $s-colour-5;*/ }
-h4, .h4 { font-size: 1.1rem; line-height: 1.6rem; font-weight: 700; /*color: $black;*/ }
-p, .p { font-size: 1.1rem; font-weight: 400; -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased; } 
+h1, .h1 { font-size: 2.8rem; line-height: 2.7rem; font-weight: 500; margin-bottom: 45px; }
+h2, .h2 { font-size: 1.8rem; line-height: 2.1rem; font-weight: 500; margin-bottom: 25px; }
+h3, .h3 { font-size: 1.4rem; line-height: 1.6rem; font-weight: 700; margin-bottom: 15px; /*color: $s-colour-5;*/ }
+h4, .h4 { font-size: 1.1rem; line-height: 1.6rem; font-weight: 700; margin-bottom: 15px; /*color: $black;*/ }
+p, .p { font-size: 1.1rem; font-weight: 400; -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased; }
 p.leading { }
-a, .a { color: $p-colour-3; font-weight: 500; text-decoration: underline; }
+a, .a { color: $p-colour-3; font-weight: 400; text-decoration: underline; }
 a:visited, .a:visited { color: $p-colour-1; }
 a:hover, .a:hover { color: $p-colour-1; background-color: rgba($p-colour-1, .1); }
-//a:active, .a:active { }
 a:focus, .a:focus {
   background-color: $t-colour-2;
   outline: 3px solid $t-colour-2;
   color: $black;
 }
 
+// SIDE BAR
+.h1-side, .h2-side, .h3-side, .h4-side { color: $p-colour-2; -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased; }
+// .h1-side { font-size: 2.8rem; line-height: 2.7rem; font-weight: 500; }
+.h2-side { font-size: 1.4rem; line-height: 1.5rem; font-weight: 500; }
+// .h3-side { font-size: 1.4rem; line-height: 1.6rem; font-weight: 700; /*color: $s-colour-5;*/ }
+// .h4-side { font-size: 1.1rem; line-height: 1.6rem; font-weight: 700; /*color: $black;*/ }
+.p-side { font-size: 1rem; line-height: 1.4rem; font-weight: 400; -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased; }
+.a-side { font-size: 1rem; line-height: 1.4rem; color: $p-colour-3; font-weight: 400; text-decoration: underline; }
+
+
 @media (max-width: 992px) {
   h1, .h1 { font-size: 1.8rem; line-height: 2.1rem; }
   h2, .h2 { font-size: 1.4rem; line-height: 1.6rem; }
   h3, .h3 { font-size: 1.1rem; line-height: 1.6rem; }
   h4, .h4 { font-size: 1rem; line-height: 1.4rem; }
-  p, .p { font-size: 1rem; }
+  p, .p { font-size: 1.1rem; line-height: 1.6rem; }
+  a, .a { font-size: 1.1rem; line-height: 1.6rem; }
 }
 
 
 ul { list-style: none; /* Remove default bullets */ }
-  ul li::before {
-    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
-    color: $p-colour-1; /* Change the color */
-    display: inline-block; /* Needed to add space between the bullet and the text */
-    width: 1em; /* Also needed for space (tweak if needed) */
-    margin-left: -1em; /* Also needed for space (tweak if needed) */
-    // display: none;
+  ul li {
+    font-size: 1.1rem;
+    line-height: 1.6rem;
   }
 
-  // ul li a:hover {
-  //   color: $white;
-  // }
+    ul li::before {
+      content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+      color: $p-colour-1; /* Change the color */
+      display: inline-block; /* Needed to add space between the bullet and the text */
+      width: 1em; /* Also needed for space (tweak if needed) */
+      margin-left: -1em; /* Also needed for space (tweak if needed) */
+    }
 
 ol {
   list-style: none;
@@ -301,22 +313,29 @@ ol {
   margin-right: 0;
   padding-left: 40px;
 }
-ol li { counter-increment: li; }
-
-  ol li:before {
-    content: counter(li);
-    color: $p-colour-3;
-    font-size: 0.9rem;
-    display: inline-block;
-    width: 1em;
-    margin-left: -1.5em;
-    margin-right: 0.5em;
-    text-align: right;
-    direction: rtl;
+  ol li {
+    counter-increment: li;
+    font-size: 1.1rem;
   }
 
+    ol li:before {
+      content: counter(li);
+      color: $p-colour-3;
+      font-size: 0.9rem;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1.5em;
+      margin-right: 0.5em;
+      text-align: right;
+      direction: rtl;
+    }
+
+    @media (max-width: 992px) {
+      ul li, ol li { font-size: 1.1rem; line-height: 1.6rem; }
+    }
+
 blockquote{
-  font-size: 1.4em;
+  font-size: 1.4rem;
   width: 100%;
   margin: 50px auto;
   font-weight: 500;
@@ -352,26 +371,9 @@ blockquote span {
   margin-top:1em;
 }
 
-// blockquote {
-//     margin: 3em;
-//     padding: 0 3em;
-//     position: relative;
-// }
-//
-// blockquote::before {
-//     content:'"';
-//     left: -40px;
-//     border-right: 1px solid $p-colour-1;
-// }
-//
-//
-// blockquote::before, blockquote::after {
-//     top: 50%;
-//     color: #F1722E;
-//     font-size: 124px;
-//     position: absolute;
-//     margin-top:-48px;
-// }
+@media (max-width: 992px) {
+  blockquote { font-size: 1.2rem; line-height: 1.6rem; }
+}
 
 /* CUSTOM */
 .left {
@@ -445,6 +447,10 @@ blockquote span {
   line-height: 2vw;
   letter-spacing: 1px;
   text-transform: uppercase;
+}
+
+@media (max-width: 992px) {
+  .word-mark h1 { }
 }
 
 .navigation {
@@ -1349,18 +1355,32 @@ a .button-text { text-decoration: none; }
     cursor: pointer;
   }
 
+@media (max-width: 992px) {
+  span.week-day-hide { display: none; }
+  .calendar-day { font-size: 0.9rem; padding: 0.5rem; }
+  .calendar-week-day { padding: 0.5rem; }
+}
+
 
 //NEWS ARTICLE
 .news-article {
   margin-bottom: 30px;
   border-bottom: 2px solid $s-colour-1;
 }
-.news-heading {
-  color: $p-colour-2;
-  font-size: 1.4rem;
-  font-weight: 400;
-  margin-bottom: 20px;
-}
+
+  .news-article a {
+    color: $p-colour-3;
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+    .news-article a h3 { color: $p-colour-3; }
+      .news-article a:hover { color: $p-colour-1; }
+        .news-article a:hover h3 {
+          color: $p-colour-1;
+          background: rgba($p-colour-1, 0.1);
+        }
+
 .news-body {
   font-size: 1.1rem;
   font-weight: 300;
@@ -1414,12 +1434,10 @@ a .button-text { text-decoration: none; }
 
   .breadcrumbs li {
     text-transform: none;
-    font-size: 14px;
-    line-height: 1.14286;
+    font-size: 1rem;
+    line-height: 1.2rem;
     float: left;
-    background-image: url("/images/separator.png");
-    background-position: 0% 50%;
-    background-repeat: no-repeat;
+    content: '\2F';
     list-style: none;
     margin-left: 0.6em;
     margin-bottom: 0.4em;
@@ -1427,7 +1445,7 @@ a .button-text { text-decoration: none; }
   }
 
   .breadcrumbs li:first-child {
-    background-image: none;
+    content: none;
     margin-left: 0;
     padding-left: 0;
   }
@@ -1439,29 +1457,25 @@ a .button-text { text-decoration: none; }
     clear: both;
   }
 
-    @media (min-width: 641px) {
-      .breadcrumbs li {
-        font-size: 16px;
-        line-height: 1.25;
-      }
-    }
+  .breadcrumbs ol li:after {
+    content: '\2F';
+    margin-left: 0.6em;
+  }
 
-    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-      .breadcrumbs li {
-        background-image: url("/images/separator-2x.png");
-        background-size: 6px 11px;
-      }
-    }
-
-    .breadcrumbs li:first-child {
-      background-image: none;
-      margin-left: 0;
-      padding-left: 0;
-    }
-
-  .breadcrumbs a { color: $p-colour-3; }
-    .breadcrumbs a:hover { color: $p-colour-1; }
+  .breadcrumbs a {
+    color: $p-colour-1; font-size: 1rem;
+    line-height: 1.2rem;
+    font-weight: 700;
+  }
+    .breadcrumbs a:hover { color: $black; background: $t-colour-2; outline: 3px solid $t-colour-2; }
     .breadcrumbs a:focus { color: $black; }
+
+@media (max-width: 992px) {
+  .breadcrumbs li {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
 
   //IN THIS SECTION
   .in-this-section {
@@ -1469,7 +1483,7 @@ a .button-text { text-decoration: none; }
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
   }
     .in-this-section h3 {
-      color: $p-colour-2;
+      // color: $p-colour-2;
     }
 
   .itl-list ol { padding: 0; margin: 0; }
@@ -1483,7 +1497,7 @@ a .button-text { text-decoration: none; }
 
   .itl-list li {
     font-weight: 600;
-    font-size: 14px;
+    font-size: 1.1rem;
     line-height: 1.14286;
     list-style: none;
     margin-left: 0.6em;
@@ -1505,37 +1519,12 @@ a .button-text { text-decoration: none; }
       min-height: 30px;
     }
 
-    // .itl-list-item.itl-active::before {
-    //   background-color: $black;
-    //   color: $white;
-    // }
-
-    // .itl-list .itl-list-item:hover::before {
-    //   background-color: $p-colour-1;
-    //   color: $white;
-    // }
-
-    // .itl-list .itl-active li:before {
-    //   background-color: $black;
-    //   color: $black;
-    //   font-weight: 600;
-    //   font-size: 1rem;
-    //   line-height: 1.8rem;
-    //   text-align: center;
-    //   border-radius: 50%;
-    //   vertical-align: middle;
-    //   display: relative;
-    //   min-width: 30px;
-    //   min-height: 30px;
-    // }
-
 .itl-link {
   text-decoration: underline !important;
   color: $p-colour-3 !important;
   cursor: pointer;
 }
   .itl-list .itl-link:hover {
-    // font-weight: 600;
     background-color: rgba($p-colour-1, .1);
     color: $p-colour-1 !important;
   }
@@ -1556,6 +1545,10 @@ a .button-text { text-decoration: none; }
     background-color: $black;
     text-align: center;
   }
+
+@media (max-width: 992px) {
+  .list-2up { columns: 1; }
+}
 
 //PAGINATION NAV BUTTONS
 .pagination-nav { margin: 0; padding: 0; margin-bottom: 30px; list-style: none; }
